@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    EL BANCO SUPLEMENTOS — script.js
    ============================================================ */
 
@@ -14,7 +14,7 @@ const SITE_CONFIG = {
   locale:         "es_AR",
   language:       "es-AR",
   currency:       "ARS",
-  defaultOgImage: "[FINAL_SITE_URL]/images/banco-suplementos-og.webp"
+  defaultOgImage: "[FINAL_SITE_URL]/banco-suplementos-og.webp"
 };
 
 // ============================================================
@@ -34,7 +34,7 @@ const products = [
     category: "supplements",
     subcategory: "creatines",
     price: "$30.000",
-    image: "images/creatina-star-300g.jpg",
+    image: "creatina-star-300g.jpg",
     stock: true,
     badge: "Más Vendido",
     description: "Creatina monohidrato micronizada Star Nutrition 300g. Clínicamente probada para aumentar la fuerza, la potencia y la masa muscular magra. El suplemento más estudiado en nutrición deportiva.",
@@ -44,7 +44,7 @@ const products = [
       servings: "60",
       goal: "Fuerza y Potencia"
     },
-    nutritionTable: "images/creatina-star-300g-tabla.jpg",
+    nutritionTable: "creatina-star-300g-tabla.jpg",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Creatina%20Monohidrato%20300g%20Star%20Nutrition",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -58,7 +58,7 @@ const products = [
     category: "supplements",
     subcategory: "creatines",
     price: "$28.000",
-    image: "images/creatina-granger-300g.jpg",
+    image: "creatina-granger-300g.jpg",
     stock: true,
     badge: "Disponible",
     description: "Creatina monohidrato Granger 300g. Fórmula pura para aumentar la fuerza, la potencia explosiva y la masa muscular magra en cada sesión de entrenamiento.",
@@ -68,7 +68,7 @@ const products = [
       servings: "60",
       goal: "Fuerza y Potencia"
     },
-    nutritionTable: "images/creatina-granger-300g-tabla.jpg",
+    nutritionTable: "creatina-granger-300g-tabla.jpg",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Creatina%20Monohidrato%20300g%20Granger",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -82,7 +82,7 @@ const products = [
     category: "supplements",
     subcategory: "creatines",
     price: "$25.500",
-    image: "images/creatina-gentech-250g.webp",
+    image: "creatina-gentech-250g.webp",
     stock: true,
     badge: "Disponible",
     description: "Creatina monohidrato Gentech 250g. Alta pureza para maximizar el rendimiento, la fuerza y la recuperación muscular entre sesiones.",
@@ -92,7 +92,7 @@ const products = [
       servings: "50",
       goal: "Fuerza y Potencia"
     },
-    nutritionTable: "images/creatina-gentech-250g-tabla.png",
+    nutritionTable: "creatina-gentech-250g-tabla.png",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Creatina%20Monohidrato%20250g%20Gentech",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -108,7 +108,7 @@ const products = [
     category: "supplements",
     subcategory: "proteins",
     price: "$34.000",
-    image: "images/whey-gentech-500g-chocolate.png",
+    image: "whey-gentech-500g-chocolate.png",
     stock: true,
     badge: "Disponible",
     description: "Proteína en polvo Gentech sabor chocolate, presentación de 500g. Ideal para el aporte proteico post-entrenamiento y la recuperación muscular.",
@@ -118,7 +118,7 @@ const products = [
       servings: "~16",
       goal: "Volumen y Recuperación"
     },
-    nutritionTable: "images/whey-gentech-500g-chocolate-tabla.png",
+    nutritionTable: "whey-gentech-500g-chocolate-tabla.png",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Prote%C3%ADna%20Gentech%20500g%20Chocolate",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -132,7 +132,7 @@ const products = [
     category: "supplements",
     subcategory: "proteins",
     price: "$45.000",
-    image: "images/proteina-vegetal-gold-nutrition.webp",
+    image: "proteina-vegetal-gold-nutrition.webp",
     stock: true,
     badge: "Disponible",
     description: "Proteína de origen vegetal Gold Nutrition. Apta para veganos y personas con intolerancia a la lactosa. Excelente perfil de aminoácidos para la recuperación.",
@@ -142,7 +142,7 @@ const products = [
       servings: "Variable",
       goal: "Volumen y Recuperación (Vegano)"
     },
-    nutritionTable: "images/proteina-vegetal-gold-nutrition-tabla.webp",
+    nutritionTable: "proteina-vegetal-gold-nutrition-tabla.webp",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Prote%C3%ADna%20Vegetal%20Gold%20Nutrition",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -158,7 +158,7 @@ const products = [
     category: "supplements",
     subcategory: "vitamins",
     price: "$20.000",
-    image: "images/vitamina-c-natier.webp",
+    image: "vitamina-c-natier.webp",
     stock: true,
     badge: "Disponible",
     description: "Vitamina C Natier para reforzar el sistema inmune, mejorar la recuperación y actuar como antioxidante. Ideal como complemento diario.",
@@ -168,7 +168,7 @@ const products = [
       servings: "Variable",
       goal: "Sistema Inmune y Salud"
     },
-    nutritionTable: "images/vitamina-c-natier-tabla.webp",
+    nutritionTable: "vitamina-c-natier-tabla.webp",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Vitamina%20C%20Natier",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -182,7 +182,7 @@ const products = [
     category: "supplements",
     subcategory: "vitamins",
     price: "$12.000",
-    image: "images/cafeina-ena.webp",
+    image: "cafeina-ena.webp",
     stock: true,
     badge: "Disponible",
     description: "Cafeína en comprimidos ENA. Aumenta la energía, el enfoque y el rendimiento deportivo. Ideal como pre-entrenamiento. Sin azúcar, sin calorías.",
@@ -192,7 +192,7 @@ const products = [
       servings: "Variable",
       goal: "Energía y Performance"
     },
-    nutritionTable: "images/cafeina-ena-tabla.webp",
+    nutritionTable: "cafeina-ena-tabla.webp",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Cafe%C3%ADna%20ENA",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -208,7 +208,7 @@ const products = [
     category: "protein-bars",
     subcategory: "integra",
     price: "$20.000",
-    image: "images/barrita-integra-arandano.jpg",
+    image: "barrita-integra-arandano.jpg",
     stock: true,
     badge: "Disponible",
     description: "Barrita Integra sabor arándano. Alta en proteínas y baja en azúcar. Snack ideal entre comidas para mantener el aporte proteico sin romper la dieta.",
@@ -218,7 +218,7 @@ const products = [
       servings: "1 barra",
       goal: "Aporte de Proteína y Saciedad"
     },
-    nutritionTable: "images/barrita-integra-arandano-tabla.jpg",
+    nutritionTable: "barrita-integra-arandano-tabla.jpg",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Integra%20Ar%C3%A1ndano",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -232,7 +232,7 @@ const products = [
     category: "protein-bars",
     subcategory: "integra",
     price: "$20.000",
-    image: "images/barrita-integra-mani.jpg",
+    image: "barrita-integra-mani.jpg",
     stock: true,
     badge: "Disponible",
     description: "Barrita Integra sabor maní. Alta en proteínas y baja en azúcar. Snack ideal entre comidas para mantener el aporte proteico sin romper la dieta.",
@@ -242,7 +242,7 @@ const products = [
       servings: "1 barra",
       goal: "Aporte de Proteína y Saciedad"
     },
-    nutritionTable: "images/barrita-integra-mani-tabla.jpg",
+    nutritionTable: "barrita-integra-mani-tabla.jpg",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Integra%20Man%C3%AD",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -258,7 +258,7 @@ const products = [
     category: "protein-bars",
     subcategory: "crudda",
     price: "$20.000",
-    image: "images/barrita-crudda-banana.webp",
+    image: "barrita-crudda-banana.webp",
     stock: true,
     badge: "Disponible",
     description: "Barrita Crudda sabor banana. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
@@ -268,7 +268,7 @@ const products = [
       servings: "Variable",
       goal: "Nutrición Limpia y Energía"
     },
-    nutritionTable: "images/barrita-crudda-banana-tabla.webp",
+    nutritionTable: "barrita-crudda-banana-tabla.webp",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Banana",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -282,7 +282,7 @@ const products = [
     category: "protein-bars",
     subcategory: "crudda",
     price: "$20.000",
-    image: "images/barrita-crudda-coco.webp",
+    image: "barrita-crudda-coco.webp",
     stock: true,
     badge: "Disponible",
     description: "Barrita Crudda sabor coco. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
@@ -292,7 +292,7 @@ const products = [
       servings: "Variable",
       goal: "Nutrición Limpia y Energía"
     },
-    nutritionTable: "images/barrita-crudda-coco-tabla.webp",
+    nutritionTable: "barrita-crudda-coco-tabla.webp",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Coco",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -306,7 +306,7 @@ const products = [
     category: "protein-bars",
     subcategory: "crudda",
     price: "$20.000",
-    image: "images/barrita-crudda-avellana.jpg",
+    image: "barrita-crudda-avellana.jpg",
     stock: true,
     badge: "Disponible",
     description: "Barrita Crudda sabor avellana. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
@@ -316,7 +316,7 @@ const products = [
       servings: "Variable",
       goal: "Nutrición Limpia y Energía"
     },
-    nutritionTable: "images/barrita-crudda-avellana-tabla.jpg",
+    nutritionTable: "barrita-crudda-avellana-tabla.jpg",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Avellana",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -330,7 +330,7 @@ const products = [
     category: "protein-bars",
     subcategory: "crudda",
     price: "$20.000",
-    image: "images/barrita-crudda-brownie.webp",
+    image: "barrita-crudda-brownie.webp",
     stock: true,
     badge: "Disponible",
     description: "Barrita Crudda sabor brownie. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
@@ -340,7 +340,7 @@ const products = [
       servings: "Variable",
       goal: "Nutrición Limpia y Energía"
     },
-    nutritionTable: "images/barrita-crudda-brownie-tabla.webp",
+    nutritionTable: "barrita-crudda-brownie-tabla.webp",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Brownie",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -354,7 +354,7 @@ const products = [
     category: "protein-bars",
     subcategory: "crudda",
     price: "$20.000",
-    image: "images/barrita-crudda-mani.jpg",
+    image: "barrita-crudda-mani.jpg",
     stock: true,
     badge: "Disponible",
     description: "Barrita Crudda sabor maní. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
@@ -364,7 +364,7 @@ const products = [
       servings: "Variable",
       goal: "Nutrición Limpia y Energía"
     },
-    nutritionTable: "images/barrita-crudda-mani-tabla.jpg",
+    nutritionTable: "barrita-crudda-mani-tabla.jpg",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Man%C3%AD",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -378,7 +378,7 @@ const products = [
     category: "protein-bars",
     subcategory: "crudda",
     price: "$20.000",
-    image: "images/barrita-crudda-arandanos.webp",
+    image: "barrita-crudda-arandanos.webp",
     stock: true,
     badge: "Disponible",
     description: "Barrita Crudda sabor arándanos. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
@@ -388,7 +388,7 @@ const products = [
       servings: "Variable",
       goal: "Nutrición Limpia y Energía"
     },
-    nutritionTable: "images/barrita-crudda-arandanos-tabla.webp",
+    nutritionTable: "barrita-crudda-arandanos-tabla.webp",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Ar%C3%A1ndano",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -404,7 +404,7 @@ const products = [
     category: "protein-bars",
     subcategory: "pont",
     price: "$26.500",
-    image: "images/barrita-pont.webp",
+    image: "barrita-pont.webp",
     stock: true,
     badge: "Disponible",
     description: "Caja de barras Pont. Alta en proteínas con cobertura de chocolate. Baja en azúcar y alta en fibra. Sabor indulgente sin comprometer tus objetivos.",
@@ -414,7 +414,7 @@ const products = [
       servings: "12",
       goal: "Proteína y Sabor"
     },
-    nutritionTable: "images/barrita-pont-tabla.webp",
+    nutritionTable: "barrita-pont-tabla.webp",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Pont",
       instagram: "https://www.instagram.com/bancodesuplementos",
@@ -430,7 +430,7 @@ const products = [
     category: "combos",
     subcategory: "combos",
     price: "$42.000",
-    image: "images/combo-crudda-pont.png",
+    image: "combo-crudda-pont.png",
     stock: true,
     badge: "Combo",
     description: "Mix de 2X Cajas de barritas proteicas de diferentes marcas y sabores. Probá Crudda y Pont en un solo combo. Ideal para variedad y descubrir tu favorita.",
@@ -454,7 +454,7 @@ const products = [
     category: "combos",
     subcategory: "combos",
     price: "$42.000",
-    image: "images/combo-integra-pont.png",
+    image: "combo-integra-pont.png",
     stock: true,
     badge: "Combo",
     description: "Mix de 2X Cajas de barritas proteicas de diferentes marcas y sabores. Probá Integra y Pont en un solo combo. Ideal para variedad y descubrir tu favorita.",
@@ -478,7 +478,7 @@ const products = [
     category: "combos",
     subcategory: "combos",
     price: "$56.000",
-    image: "images/combo-mixto-3cajas-crudda-integra.png",
+    image: "combo-mixto-3cajas-crudda-integra.png",
     stock: true,
     badge: "Combo",
     description: "Mix de 3X Cajas de barritas proteicas de diferentes marcas y sabores. Probá Integra y Crudda en un solo combo. Ideal para variedad y descubrir tu favorita.",
@@ -502,7 +502,7 @@ const products = [
     category: "combos",
     subcategory: "combos",
     price: "$90.000",
-    image: "images/combo-mixto-5cajas-crudda-integra.png",
+    image: "combo-mixto-5cajas-crudda-integra.png",
     stock: true,
     badge: "Combo",
     description: "Mix de 5X Cajas de barritas proteicas de diferentes marcas y sabores. Probá Integra y Crudda en un solo combo. Ideal para variedad y descubrir tu favorita.",
@@ -527,7 +527,7 @@ const products = [
     category: "combos",
     subcategory: "combos",
     price: "Consultar",
-    image: "images/combo-proteina-creatina-gentech.png",
+    image: "combo-proteina-creatina-gentech.png",
     stock: true,
     badge: "Combo",
     description: "Combo Gentech: Proteína en polvo + Creatina Monohidrato 250g. La dupla perfecta para maximizar el rendimiento, la recuperación y el crecimiento muscular.",
@@ -551,7 +551,7 @@ const products = [
     category: "combos",
     subcategory: "combos",
     price: "$40.000",
-    image: "images/combo-shaker-proteina-gentech.png",
+    image: "combo-shaker-proteina-gentech.png",
     stock: true,
     badge: "Combo",
     description: "Combo Gentech: Proteína en polvo + Shaker. Todo lo que necesitás para empezar: tu proteína y el vaso mezclador para prepararla en cualquier momento y lugar.",
@@ -575,7 +575,7 @@ const products = [
     category: "combos",
     subcategory: "combos",
     price: "$50.000",
-    image: "images/combo-shaker-proteina-gold-nutrition.png",
+    image: "combo-shaker-proteina-gold-nutrition.png",
     stock: true,
     badge: "Combo",
     description: "Combo Gold Nutrition: Proteína Vegana en polvo + Shaker. La combinación ideal para incorporar tu suplemento con el equipo completo desde el primer día.",
@@ -601,7 +601,7 @@ const products = [
     category: "accessories",
     subcategory: "accessories",
     price: "$7.400",
-    image: "images/shaker-ena-plus.jpg",
+    image: "shaker-ena-plus.jpg",
     stock: true,
     badge: "Disponible",
     description: "Shaker ENA Plus. Vaso mezclador con amplia capacidad, diseño ergonómico y tapa hermética a prueba de filtraciones. Ideal para preparar proteínas y suplementos en polvo.",
@@ -611,7 +611,7 @@ const products = [
       servings: "-",
       goal: "Accesorio Deportivo"
     },
-    nutritionTable: "images/shaker-ena-plus-tabla.jpg",
+    nutritionTable: "shaker-ena-plus-tabla.jpg",
     links: {
       whatsapp: "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Shaker%20ENA%20Plus",
       instagram: "https://www.instagram.com/bancodesuplementos",
