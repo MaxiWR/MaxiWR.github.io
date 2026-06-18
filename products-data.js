@@ -1,4 +1,5 @@
-[
+/* GENERATED — do not edit manually. Run: node scripts/generate-product-pages.mjs */
+window.__PRODUCTS__ = [
   {
     "id": 15,
     "slug": "creatina-star-300g",
@@ -672,4 +673,4 @@
       "instagram": "https://www.instagram.com/bancodesuplementos"
     }
   }
-]
+];
