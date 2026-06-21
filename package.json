@@ -1,0 +1,21 @@
+{
+  "name": "banco-suplementos-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static Banco de Suplementos catalog generated from Excel",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "catalog:import": "node scripts/import-products-from-excel.mjs catalogo_productos_banco.xlsx",
+    "catalog:generate": "node scripts/generate-product-pages.mjs",
+    "catalog:validate": "node scripts/validate-catalog.mjs",
+    "catalog:update": "npm run catalog:import && npm run catalog:generate && npm run catalog:validate",
+    "pages:prepare": "node scripts/prepare-pages-artifact.mjs",
+    "build": "npm run catalog:update && npm run pages:prepare"
+  },
+  "dependencies": {
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  }
+}

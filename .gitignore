@@ -1,0 +1,7 @@
+node_modules/
+_site/
+.catalog-backups/
+*.tmp
+~$*.xlsx
+.DS_Store
+Thumbs.db

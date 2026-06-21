@@ -17,7 +17,10 @@
     "heroCarouselOrder": 1,
     "badge": "Más Vendido",
     "featured": true,
-    "relatedSlugs": ["whey-gentech-500g-chocolate", "combo-proteina-creatina-gentech"],
+    "relatedSlugs": [
+      "whey-gentech-500g-chocolate",
+      "combo-proteina-creatina-gentech"
+    ],
     "description": "Creatina monohidrato micronizada Star Nutrition 300g. Clínicamente probada para aumentar la fuerza, la potencia y la masa muscular magra. El suplemento más estudiado en nutrición deportiva.",
     "characteristics": {
       "presentation": "300g en polvo",
@@ -46,7 +49,10 @@
     "stock": true,
     "active": true,
     "badge": "Disponible",
-    "relatedSlugs": ["whey-gentech-500g-chocolate", "shaker-ena-plus"],
+    "relatedSlugs": [
+      "whey-gentech-500g-chocolate",
+      "shaker-ena-plus"
+    ],
     "description": "Creatina monohidrato Granger 300g. Fórmula pura para aumentar la fuerza, la potencia explosiva y la masa muscular magra en cada sesión de entrenamiento.",
     "characteristics": {
       "presentation": "300g en polvo",
@@ -74,7 +80,10 @@
     "stock": true,
     "active": true,
     "badge": "Disponible",
-    "relatedSlugs": ["whey-gentech-500g-chocolate", "combo-proteina-creatina-gentech"],
+    "relatedSlugs": [
+      "whey-gentech-500g-chocolate",
+      "combo-proteina-creatina-gentech"
+    ],
     "description": "Creatina monohidrato Gentech 250g. Alta pureza para maximizar el rendimiento, la fuerza y la recuperación muscular entre sesiones.",
     "characteristics": {
       "presentation": "250g en polvo",
@@ -105,7 +114,11 @@
     "heroCarouselOrder": 2,
     "badge": "Disponible",
     "featured": true,
-    "relatedSlugs": ["creatina-star-300g", "shaker-ena-plus", "combo-proteina-creatina-gentech"],
+    "relatedSlugs": [
+      "creatina-star-300g",
+      "shaker-ena-plus",
+      "combo-proteina-creatina-gentech"
+    ],
     "description": "Proteína en polvo Gentech sabor chocolate, presentación de 500g. Ideal para el aporte proteico post-entrenamiento y la recuperación muscular.",
     "characteristics": {
       "presentation": "500g en polvo",
@@ -133,7 +146,10 @@
     "stock": true,
     "active": true,
     "badge": "Disponible",
-    "relatedSlugs": ["shaker-ena-plus", "combo-shaker-proteina-gold-nutrition"],
+    "relatedSlugs": [
+      "shaker-ena-plus",
+      "combo-shaker-proteina-gold-nutrition"
+    ],
     "description": "Proteína de origen vegetal Gold Nutrition. Apta para veganos y personas con intolerancia a la lactosa. Excelente perfil de aminoácidos para la recuperación.",
     "characteristics": {
       "presentation": "En polvo",
@@ -378,8 +394,7 @@
     "subcategory": "crudda",
     "price": "$20.000",
     "priceNumeric": 20000,
-    "image": "barrita-crudda-mani.jpg",
-    "imageSurface": "light",
+    "image": "barrita-crudda-mani.png",
     "stock": true,
     "active": true,
     "badge": "Disponible",
@@ -440,7 +455,10 @@
     "heroCarouselOrder": 3,
     "badge": "Disponible",
     "featured": true,
-    "relatedSlugs": ["combo-crudda-pont", "combo-integra-pont"],
+    "relatedSlugs": [
+      "combo-crudda-pont",
+      "combo-integra-pont"
+    ],
     "description": "Caja de barras Pont. Alta en proteínas con cobertura de chocolate. Baja en azúcar y alta en fibra. Sabor indulgente sin comprometer tus objetivos.",
     "characteristics": {
       "presentation": "Caja de 12U",
@@ -477,7 +495,6 @@
     },
     "howToUse": "Consumí una o dos barritas al día como snack entre comidas o post-entrenamiento. Alternás entre sabores de Crudda y Pont para variar. No requieren preparación ni refrigeración.",
     "goalDescription": "Variedad proteica premium con mejor precio. Dos marcas en un combo para no aburrir el paladar durante la semana y mantener tu plan de alimentación sin excusas.",
-    "nutritionTable": null,
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Crudda%20Caja%20x12"
     }
@@ -504,7 +521,6 @@
     },
     "howToUse": "Consumí una o dos barritas al día como snack entre comidas o post-entrenamiento. Alternás entre sabores de Integra y Pont para variar. No requieren preparación ni refrigeración.",
     "goalDescription": "Variedad proteica premium con mejor precio. Dos marcas distintas en un combo para no repetir el mismo sabor toda la semana y sostener tu plan de alimentación fácilmente.",
-    "nutritionTable": null,
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Integra%20Caja%20x12"
     }
@@ -531,7 +547,6 @@
     },
     "howToUse": "Consumí una o dos barritas al día como snack entre comidas o post-entrenamiento. Variá entre las tres cajas para no aburrir el paladar. No requieren preparación ni refrigeración.",
     "goalDescription": "Variedad máxima para toda la semana. Tres cajas de barritas proteicas premium con mejor precio por unidad. Abastecete con opciones saludables y organizá tu semana sin quedarte sin stock.",
-    "nutritionTable": null,
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Pont%20Caja%20x12"
     }
@@ -558,7 +573,6 @@
     },
     "howToUse": "Consumí una o dos barritas al día como snack entre comidas o post-entrenamiento. Variá entre las cinco cajas para no repetir sabores. No requieren preparación ni refrigeración.",
     "goalDescription": "El mejor precio por unidad para abastecerte durante semanas. Cinco cajas de barritas proteicas para quienes toman en serio su nutrición y no quieren quedarse sin opciones nutritivas en ningún momento.",
-    "nutritionTable": null,
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Mixto%20Barritas%20x12"
     }
@@ -571,14 +585,16 @@
     "category": "combos",
     "subcategory": "combos",
     "price": "Consultar",
-    "priceNumeric": null,
-    "skipProductSnippet": true,
     "image": "combo-proteina-creatina-gentech.png",
     "stock": true,
     "active": true,
     "badge": "Combo",
     "featured": true,
-    "relatedSlugs": ["whey-gentech-500g-chocolate", "creatina-gentech-250g"],
+    "skipProductSnippet": true,
+    "relatedSlugs": [
+      "whey-gentech-500g-chocolate",
+      "creatina-gentech-250g"
+    ],
     "description": "Combo Gentech: Proteína en polvo + Creatina Monohidrato 250g. La dupla perfecta para maximizar el rendimiento, la recuperación y el crecimiento muscular.",
     "characteristics": {
       "presentation": "Proteína 500g + Creatina 250g",
@@ -588,7 +604,6 @@
     },
     "howToUse": "Post-entrenamiento: disolvé la proteína y la creatina juntas en 250–300 ml de agua o leche. También podés consumirlas por separado. La creatina puede tomarse en cualquier momento del día.",
     "goalDescription": "La dupla más efectiva del fitness: proteína para recuperar y construir músculo, creatina para aumentar la fuerza y la potencia. Juntas maximizan los resultados de cada sesión y aceleran la adaptación al ejercicio.",
-    "nutritionTable": null,
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Prote%C3%ADna%20%2B%20Creatina%20Gentech"
     }
@@ -615,7 +630,6 @@
     },
     "howToUse": "Agregá 1 porción de proteína (aprox. 30 g) en el shaker con 200–300 ml de agua o leche. Cerrá bien y agitá 10–15 segundos hasta obtener una mezcla homogénea. Tomá preferentemente post-entrenamiento.",
     "goalDescription": "Todo lo que necesitás para empezar: la proteína para recuperar y ganar músculo, y el shaker para prepararla en cualquier lugar. El combo perfecto para iniciar tu rutina de suplementación sin complicaciones.",
-    "nutritionTable": null,
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Prote%C3%ADna%20%2B%20Shaker%20Gentech"
     }
@@ -642,7 +656,6 @@
     },
     "howToUse": "Agregá 1 porción de proteína vegana en el shaker con 200–300 ml de agua o leche vegetal. Cerrá bien y agitá 10–15 segundos. Tomá post-entrenamiento o cuando necesitás sumar proteína a tu dieta.",
     "goalDescription": "La combinación perfecta para suplementarte con proteína vegana de forma práctica. Sin lactosa, sin proteínas animales. Todo lo necesario para preparar tu suplemento en cualquier momento y lugar.",
-    "nutritionTable": null,
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Prote%C3%ADna%20%2B%20Shaker%20Gold%20Nutrition"
     }
@@ -663,7 +676,10 @@
     "heroCarousel": true,
     "heroCarouselOrder": 5,
     "badge": "Disponible",
-    "relatedSlugs": ["whey-gentech-500g-chocolate", "combo-shaker-proteina-gentech"],
+    "relatedSlugs": [
+      "whey-gentech-500g-chocolate",
+      "combo-shaker-proteina-gentech"
+    ],
     "description": "Shaker ENA Plus. Vaso mezclador con amplia capacidad, diseño ergonómico y tapa hermética a prueba de filtraciones. Ideal para preparar proteínas y suplementos en polvo.",
     "characteristics": {
       "presentation": "Unidad",

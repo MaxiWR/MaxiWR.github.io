@@ -21,49 +21,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js LTS
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Import products from Excel
+        run: node scripts/import-products-from-excel.mjs catalogo_productos_banco.xlsx
 
       - name: Generate product pages and sitemap
         run: node scripts/generate-product-pages.mjs
 
-      - name: Validate — no /productos/ references in generated pages
-        run: |
-          ERRORS=0
-          for FILE in *.html; do
-            [ "$FILE" = "index.html" ] && continue
-            if grep -q "productos/" "$FILE" 2>/dev/null; then
-              echo "ERROR: $FILE contains a /productos/ reference"
-              ERRORS=$((ERRORS + 1))
-            fi
-          done
-          if [ "$ERRORS" -gt 0 ]; then
-            echo "Validation failed: $ERRORS file(s) with /productos/ references"
-            exit 1
-          fi
-          echo "OK: No /productos/ references found in generated pages."
+      - name: Validate catalog
+        run: node scripts/validate-catalog.mjs
 
-      - name: Validate — all active products have a generated page
-        run: |
-          node -e "
-          const fs = require('fs');
-          const products = JSON.parse(fs.readFileSync('products.json', 'utf8'))
-            .filter(p => p.active !== false);
-          let errors = 0;
-          for (const p of products) {
-            if (!fs.existsSync(p.slug + '.html')) {
-              console.error('MISSING: ' + p.slug + '.html');
-              errors++;
-            }
-          }
-          if (errors > 0) {
-            console.error('Validation failed: ' + errors + ' product page(s) missing.');
-            process.exit(1);
-          }
-          console.log('OK: All ' + products.length + ' active products have generated pages.');
-          "
+      - name: Prepare _site/ artifact
+        run: node scripts/prepare-pages-artifact.mjs
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -71,7 +48,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: _site
 
   deploy:
     environment:

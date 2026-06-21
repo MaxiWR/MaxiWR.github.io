@@ -1,0 +1,75 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Actualizar catálogo completo",
+      "type": "shell",
+      "command": "npm run catalog:update",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Importar desde Excel",
+      "type": "shell",
+      "command": "node scripts/import-products-from-excel.mjs catalogo_productos_banco.xlsx",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Generar páginas de productos",
+      "type": "shell",
+      "command": "node scripts/generate-product-pages.mjs",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Validar catálogo",
+      "type": "shell",
+      "command": "node scripts/validate-catalog.mjs",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Preparar _site/ para deploy",
+      "type": "shell",
+      "command": "node scripts/prepare-pages-artifact.mjs",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build completo (catalog + pages + _site)",
+      "type": "shell",
+      "command": "npm run build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
