@@ -1,0 +1,1388 @@
+/* ============================================================
+   EL BANCO SUPLEMENTOS — design.css
+   Radical visual redesign — loaded after styles.css
+   Deep dark premium fitness brand with multi-color category system
+   ============================================================ */
+
+/* ── 1. DESIGN TOKENS (overrides styles.css variables) ─────── */
+:root {
+  /* Deeper, richer dark backgrounds */
+  --bg:              #050b18;
+  --bg-card:         #0c1929;
+  --bg-card-hover:   #102038;
+
+  /* Primary brand upgrade */
+  --electric-blue:   #1677ff;
+  --brand-blue:      #1677ff;
+  --brand-blue-lt:   #4090ff;
+  --deep-blue:       #0d47c9;
+
+  /* Multi-color accent system */
+  --c-blue:          #1677ff;
+  --c-cyan:          #22d3ee;
+  --c-violet:        #7c3aed;
+  --c-magenta:       #ec4899;
+  --c-gold:          #f5b942;
+  --c-orange:        #ff7a18;
+  --c-green:         #22c55e;
+
+  /* Glow colors */
+  --glow-blue:       rgba(22,  119, 255, 0.22);
+  --glow-cyan:       rgba(34,  211, 238, 0.22);
+  --glow-violet:     rgba(124,  58, 237, 0.22);
+  --glow-gold:       rgba(245, 185,  66, 0.22);
+  --glow-orange:     rgba(255, 122,  24, 0.22);
+  --glow-green:      rgba(34,  197,  94, 0.22);
+
+  /* Updated borders */
+  --border:          rgba(22, 119, 255, 0.18);
+  --border-hover:    rgba(22, 119, 255, 0.50);
+  --border-glow:     rgba(22, 119, 255, 0.70);
+
+  /* Richer shadows */
+  --shadow-card:     0 4px 32px rgba(0, 0, 0, 0.6);
+  --shadow-hover:    0 16px 56px rgba(0, 0, 0, 0.5);
+
+  /* Warmer text */
+  --stone:           #b8c4d8;
+  --stone-dim:       #6e7e96;
+  --off-white:       #e8f0fc;
+  --overlay:         rgba(5, 11, 24, 0.94);
+}
+
+/* ── 2. AURORA BACKGROUND ───────────────────────────────────── */
+body {
+  background-color: #050b18;
+  background-image:
+    radial-gradient(ellipse 900px 600px at 90% -5%,  rgba(22,  119, 255, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 600px 500px at -5%  70%, rgba(34,  211, 238, 0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 700px 500px at 50% 110%, rgba(124,  58, 237, 0.08) 0%, transparent 55%);
+  background-attachment: fixed;
+}
+
+/* ── 3. TYPOGRAPHY UPGRADES ─────────────────────────────────── */
+.section-label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 56px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--c-blue);
+}
+
+/* ── 4. HEADER GLASS ────────────────────────────────────────── */
+.header {
+  background: rgba(5, 11, 24, 0.72);
+  border-bottom-color: rgba(22, 119, 255, 0.22);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.header.header--scrolled {
+  background: rgba(5, 11, 24, 0.90);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.6), 0 1px 0 rgba(22,119,255,0.18);
+}
+
+.nav-link::after {
+  background: var(--c-blue);
+}
+
+/* ── 5. BUTTONS VIVID ───────────────────────────────────────── */
+.btn-primary {
+  background: linear-gradient(135deg, #1677ff 0%, #0d47c9 100%);
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(22, 119, 255, 0.35);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #4090ff 0%, #1677ff 100%);
+  box-shadow: 0 8px 32px rgba(22, 119, 255, 0.50);
+  transform: translateY(-2px);
+  border-color: transparent;
+}
+
+.btn-primary:active { transform: translateY(0) scale(0.985); }
+
+.btn-secondary {
+  border-color: rgba(34, 211, 238, 0.45);
+  color: var(--c-cyan);
+  background: rgba(34, 211, 238, 0.06);
+}
+
+.btn-secondary:hover {
+  background: rgba(34, 211, 238, 0.14);
+  border-color: var(--c-cyan);
+  color: var(--c-cyan);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border-color: var(--border);
+  color: var(--stone);
+}
+
+.btn-outline:hover {
+  border-color: var(--c-blue);
+  color: var(--c-blue);
+  background: rgba(22, 119, 255, 0.08);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #1fbe5b 0%, #17993f 100%);
+  box-shadow: 0 3px 14px rgba(31, 190, 91, 0.30);
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #25d366 0%, #1fbe5b 100%);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.40);
+  transform: translateY(-2px);
+}
+
+/* ── 6. HERO ─────────────────────────────────────────────────── */
+.hero { background: transparent; }
+
+.hero-spotlight {
+  background:
+    radial-gradient(ellipse 700px 550px at 68% 45%, rgba(22, 119, 255, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 420px 380px at 30% 25%, rgba(124, 58, 237, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 340px 300px at 88% 78%, rgba(245, 185, 66, 0.09) 0%, transparent 55%);
+}
+
+.hero-bg-pattern {
+  background-image:
+    linear-gradient(rgba(22, 119, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 119, 255, 0.055) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+.hero-label {
+  color: var(--c-cyan);
+  border-color: rgba(34, 211, 238, 0.40);
+  background: rgba(34, 211, 238, 0.08);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+}
+
+.hero-title {
+  font-size: clamp(52px, 7.5vw, 96px);
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #ffffff 0%, #a8c8ff 40%, #1677ff 70%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  color: var(--stone);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.hero-buttons .btn-primary {
+  padding: 14px 30px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-buttons .btn-secondary {
+  padding: 14px 26px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.hero-cat-badge {
+  background: rgba(22, 119, 255, 0.10);
+  border-color: rgba(22, 119, 255, 0.28);
+  color: var(--c-blue);
+}
+
+.hero-cat-badge:nth-child(2) {
+  background: rgba(124, 58, 237, 0.10);
+  border-color: rgba(124, 58, 237, 0.28);
+  color: var(--c-violet);
+}
+
+.hero-cat-badge:nth-child(3) {
+  background: rgba(34, 211, 238, 0.10);
+  border-color: rgba(34, 211, 238, 0.28);
+  color: var(--c-cyan);
+}
+
+.hero-cat-badge:nth-child(4) {
+  background: rgba(245, 185, 66, 0.10);
+  border-color: rgba(245, 185, 66, 0.28);
+  color: var(--c-gold);
+}
+
+/* Hero product cards — each with a distinct category glow */
+.hero-card {
+  background: #0c1929;
+  border-radius: 14px;
+}
+
+/* Hero card 1 — Creatine (blue) */
+.hero-card--1 .hero-card-img {
+  background: linear-gradient(135deg, #050d1c 0%, #0a1f40 50%, rgba(22,119,255,0.25) 100%);
+}
+.hero-card--1 {
+  border-color: rgba(22, 119, 255, 0.45);
+  box-shadow: 0 0 50px rgba(22,119,255,0.18), 0 4px 32px rgba(0,0,0,0.6);
+}
+.hero-card--1 .hero-card-tag { background: var(--c-blue); opacity: 1; }
+
+/* Hero card 2 — Protein (violet) */
+.hero-card--2 .hero-card-img {
+  background: linear-gradient(135deg, #0c0520 0%, #1d0840 50%, rgba(124,58,237,0.25) 100%);
+}
+.hero-card--2 {
+  border-color: rgba(124, 58, 237, 0.55) !important;
+  box-shadow: 0 0 60px rgba(124,58,237,0.20), 0 4px 32px rgba(0,0,0,0.6) !important;
+}
+.hero-card--2 .hero-card-tag { background: var(--c-violet); opacity: 1; }
+
+/* Hero card 3 — Bars (gold/orange) */
+.hero-card--3 .hero-card-img {
+  background: linear-gradient(135deg, #1a0d05 0%, #301808 50%, rgba(245,185,66,0.22) 100%);
+}
+.hero-card--3 {
+  border-color: rgba(245, 185, 66, 0.45);
+  box-shadow: 0 0 50px rgba(245,185,66,0.14), 0 4px 32px rgba(0,0,0,0.6);
+}
+.hero-card--3 .hero-card-tag { background: var(--c-gold); opacity: 1; }
+
+/* ── 7. TRUST STRIP ────────────────────────────────────────── */
+.trust-strip {
+  background: rgba(5, 11, 24, 0.88);
+  border-top-color: rgba(22, 119, 255, 0.18);
+  border-bottom-color: rgba(22, 119, 255, 0.18);
+  backdrop-filter: blur(16px);
+}
+
+/* Distinct color per trust item — dividers sit at positions 2,4,6 so
+   items land at positions 1,3,5,7 among their div siblings */
+.trust-item:nth-child(1) .trust-icon {
+  background: rgba(22, 119, 255, 0.12);
+  border-color: rgba(22, 119, 255, 0.35);
+  color: var(--c-blue);
+}
+
+.trust-item:nth-child(3) .trust-icon {
+  background: rgba(124, 58, 237, 0.12);
+  border-color: rgba(124, 58, 237, 0.35);
+  color: var(--c-violet);
+}
+
+.trust-item:nth-child(5) .trust-icon {
+  background: rgba(34, 211, 238, 0.12);
+  border-color: rgba(34, 211, 238, 0.35);
+  color: var(--c-cyan);
+}
+
+.trust-item:nth-child(7) .trust-icon {
+  background: rgba(245, 185, 66, 0.12);
+  border-color: rgba(245, 185, 66, 0.35);
+  color: var(--c-gold);
+}
+
+/* ── 8. FILTERS BAR ─────────────────────────────────────────── */
+.filters-bar {
+  background: rgba(5, 11, 24, 0.96);
+  border-bottom-color: rgba(22, 119, 255, 0.15);
+  backdrop-filter: blur(16px);
+}
+
+.search-input {
+  background: rgba(12, 25, 41, 0.9);
+  border-color: rgba(22, 119, 255, 0.22);
+  border-radius: 8px;
+  color: var(--off-white);
+  width: 240px;
+}
+
+.search-input:focus {
+  border-color: var(--c-blue);
+  box-shadow: 0 0 0 3px rgba(22, 119, 255, 0.12);
+}
+
+.brand-select {
+  background: rgba(12, 25, 41, 0.9);
+  border-color: rgba(22, 119, 255, 0.22);
+  border-radius: 8px;
+  color: var(--stone);
+}
+
+.brand-select:focus { border-color: var(--c-blue); }
+
+/* Filter pills — default inactive */
+.pill {
+  border-color: rgba(22, 119, 255, 0.18);
+  color: var(--stone-dim);
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  transition: all 0.2s ease;
+}
+
+.pill:hover {
+  border-color: rgba(22, 119, 255, 0.40);
+  color: var(--off-white);
+  background: rgba(22, 119, 255, 0.08);
+}
+
+/* Category-colored active pills */
+.pill[data-filter="all"].active,
+.pill.active:not([data-filter]) {
+  background: var(--c-blue);
+  border-color: var(--c-blue);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(22,119,255,0.40);
+}
+
+.pill[data-filter="creatines"].active {
+  background: var(--c-blue);
+  border-color: var(--c-blue);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(22,119,255,0.45);
+}
+
+.pill[data-filter="proteins"].active {
+  background: var(--c-violet);
+  border-color: var(--c-violet);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(124,58,237,0.45);
+}
+
+.pill[data-filter="vitamins"].active {
+  background: var(--c-cyan);
+  border-color: var(--c-cyan);
+  color: #050b18;
+  box-shadow: 0 0 14px rgba(34,211,238,0.45);
+}
+
+.pill[data-filter="protein-bars"].active {
+  background: var(--c-orange);
+  border-color: var(--c-orange);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(255,122,24,0.45);
+}
+
+.pill[data-filter="combos"].active {
+  background: linear-gradient(135deg, var(--c-blue), var(--c-violet));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 14px rgba(124,58,237,0.40);
+}
+
+.pill[data-filter="accessories"].active {
+  background: var(--c-green);
+  border-color: var(--c-green);
+  color: #050b18;
+  box-shadow: 0 0 14px rgba(34,197,94,0.45);
+}
+
+/* ── 9. PRODUCT SECTIONS — Category accent lines ───────────── */
+#creatines   .section-label { color: var(--c-blue); }
+#creatines   .section-title::after { background: linear-gradient(90deg, var(--c-blue), transparent); }
+
+#proteins    .section-label { color: var(--c-violet); }
+#proteins    .section-title::after { background: linear-gradient(90deg, var(--c-violet), transparent); }
+
+#vitamins    .section-label { color: var(--c-cyan); }
+#vitamins    .section-title::after { background: linear-gradient(90deg, var(--c-cyan), transparent); }
+
+#protein-bars .section-label { color: var(--c-orange); }
+#protein-bars .section-title::after { background: linear-gradient(90deg, var(--c-orange), var(--c-gold), transparent); }
+
+#combos      .section-label { color: var(--c-magenta); }
+#combos      .section-title::after { background: linear-gradient(90deg, var(--c-magenta), var(--c-violet), transparent); }
+
+#accessories .section-label { color: var(--c-green); }
+#accessories .section-title::after { background: linear-gradient(90deg, var(--c-green), transparent); }
+
+/* ── 10. PRODUCT CARDS — Category-specific accents ──────────── */
+/* Base card upgrade */
+.product-card {
+  background: #0c1929;
+  border-color: rgba(22,119,255,0.15);
+  border-radius: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.product-card:hover { transform: translateY(-6px); }
+
+/* ── Creatines: Electric Blue ── */
+[data-subcategory="creatines"] .card-image {
+  background: linear-gradient(160deg, #050d1c 0%, #091930 40%, #0d2a50 70%, rgba(22,119,255,0.20) 100%);
+}
+[data-subcategory="creatines"]:hover {
+  border-color: rgba(22,119,255,0.55);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(22,119,255,0.22), 0 0 35px rgba(22,119,255,0.12);
+}
+[data-subcategory="creatines"]::after {
+  background: radial-gradient(380px circle at var(--mouse-x) var(--mouse-y), rgba(22,119,255,0.16) 0%, transparent 65%);
+}
+[data-subcategory="creatines"] .card-price { color: var(--c-blue); }
+[data-subcategory="creatines"] .card-brand { color: rgba(22,119,255,0.80); }
+
+/* ── Proteins: Violet ── */
+[data-subcategory="proteins"] .card-image {
+  background: linear-gradient(160deg, #090518 0%, #150830 40%, #230f50 70%, rgba(124,58,237,0.20) 100%);
+}
+[data-subcategory="proteins"]:hover {
+  border-color: rgba(124,58,237,0.55);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(124,58,237,0.22), 0 0 35px rgba(124,58,237,0.12);
+}
+[data-subcategory="proteins"]::after {
+  background: radial-gradient(380px circle at var(--mouse-x) var(--mouse-y), rgba(124,58,237,0.16) 0%, transparent 65%);
+}
+[data-subcategory="proteins"] .card-price { color: #a855f7; }
+[data-subcategory="proteins"] .card-brand { color: rgba(124,58,237,0.80); }
+
+/* ── Vitamins: Cyan ── */
+[data-subcategory="vitamins"] .card-image {
+  background: linear-gradient(160deg, #031418 0%, #062030 40%, #083844 70%, rgba(34,211,238,0.20) 100%);
+}
+[data-subcategory="vitamins"]:hover {
+  border-color: rgba(34,211,238,0.55);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(34,211,238,0.22), 0 0 35px rgba(34,211,238,0.12);
+}
+[data-subcategory="vitamins"]::after {
+  background: radial-gradient(380px circle at var(--mouse-x) var(--mouse-y), rgba(34,211,238,0.16) 0%, transparent 65%);
+}
+[data-subcategory="vitamins"] .card-price { color: var(--c-cyan); }
+[data-subcategory="vitamins"] .card-brand { color: rgba(34,211,238,0.75); }
+
+/* ── Protein Bars: Orange/Gold (integra, crudda, pont) ── */
+[data-subcategory="integra"] .card-image,
+[data-subcategory="crudda"]  .card-image,
+[data-subcategory="pont"]    .card-image {
+  background: linear-gradient(160deg, #150b02 0%, #2a1205 40%, #401c08 70%, rgba(245,185,66,0.22) 100%);
+}
+[data-subcategory="integra"]:hover,
+[data-subcategory="crudda"]:hover,
+[data-subcategory="pont"]:hover {
+  border-color: rgba(245,185,66,0.55);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(245,185,66,0.22), 0 0 35px rgba(245,185,66,0.10);
+}
+[data-subcategory="integra"]::after,
+[data-subcategory="crudda"]::after,
+[data-subcategory="pont"]::after {
+  background: radial-gradient(380px circle at var(--mouse-x) var(--mouse-y), rgba(245,185,66,0.14) 0%, transparent 65%);
+}
+[data-subcategory="integra"] .card-price,
+[data-subcategory="crudda"]  .card-price,
+[data-subcategory="pont"]    .card-price { color: var(--c-gold); }
+[data-subcategory="integra"] .card-brand,
+[data-subcategory="crudda"]  .card-brand,
+[data-subcategory="pont"]    .card-brand { color: rgba(245,185,66,0.75); }
+
+/* ── Combos: Blue-Violet gradient ── */
+[data-subcategory="combos"] .card-image {
+  background: linear-gradient(160deg, #050d1c 0%, #0d0f28 40%, #1a1040 70%, rgba(124,58,237,0.18) 100%);
+}
+[data-subcategory="combos"]:hover {
+  border-color: rgba(124,58,237,0.50);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(124,58,237,0.22), 0 0 35px rgba(124,58,237,0.10);
+}
+[data-subcategory="combos"]::after {
+  background: radial-gradient(380px circle at var(--mouse-x) var(--mouse-y), rgba(124,58,237,0.15) 0%, transparent 65%);
+}
+[data-subcategory="combos"] .card-price {
+  background: linear-gradient(90deg, var(--c-blue), var(--c-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Accessories: Green ── */
+[data-subcategory="accessories"] .card-image {
+  background: linear-gradient(160deg, #030e08 0%, #071a0f 40%, #0d2c1a 70%, rgba(34,197,94,0.20) 100%);
+}
+[data-subcategory="accessories"]:hover {
+  border-color: rgba(34,197,94,0.55);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(34,197,94,0.22), 0 0 35px rgba(34,197,94,0.10);
+}
+[data-subcategory="accessories"]::after {
+  background: radial-gradient(380px circle at var(--mouse-x) var(--mouse-y), rgba(34,197,94,0.15) 0%, transparent 65%);
+}
+[data-subcategory="accessories"] .card-price { color: var(--c-green); }
+[data-subcategory="accessories"] .card-brand { color: rgba(34,197,94,0.75); }
+
+/* Card typography upgrades */
+.card-name {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.card-price {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Card action buttons */
+.card-actions .btn-sm {
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+}
+
+.card-btn-details {
+  border-color: rgba(22,119,255,0.30);
+  color: var(--c-blue);
+}
+.card-btn-details:hover {
+  background: rgba(22,119,255,0.12);
+  border-color: var(--c-blue);
+  color: var(--c-blue);
+}
+
+/* Stock indicators */
+.stock--available { color: var(--c-green); font-weight: 600; }
+.stock--out       { color: #ef4444; font-weight: 600; }
+
+/* ── 11. FEATURED SECTION ────────────────────────────────────── */
+.featured-section {
+  position: relative;
+  overflow: visible;
+}
+
+.featured-section::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(22,119,255,0.25), rgba(124,58,237,0.25), transparent);
+  pointer-events: none;
+}
+
+.featured-card {
+  background: #0c1929;
+  border-color: rgba(22,119,255,0.18);
+  border-radius: 14px;
+  width: 260px;
+}
+
+.featured-card:hover {
+  border-color: rgba(22,119,255,0.45);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 30px rgba(22,119,255,0.12);
+  transform: translateY(-6px);
+}
+
+/* Vary colors across featured cards by position */
+.featured-card:nth-child(1) .featured-card-img {
+  background: linear-gradient(135deg, #090518, #1d0840, rgba(124,58,237,0.30));
+}
+.featured-card:nth-child(1) { border-color: rgba(124,58,237,0.25); }
+.featured-card:nth-child(1):hover { border-color: rgba(124,58,237,0.5); box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 30px rgba(124,58,237,0.12); }
+
+.featured-card:nth-child(2) .featured-card-img {
+  background: linear-gradient(135deg, #050d1c, #0a1f40, rgba(22,119,255,0.30));
+}
+.featured-card:nth-child(2) { border-color: rgba(22,119,255,0.25); }
+
+.featured-card:nth-child(3) .featured-card-img {
+  background: linear-gradient(135deg, #1a0d05, #301808, rgba(245,185,66,0.30));
+}
+.featured-card:nth-child(3) { border-color: rgba(245,185,66,0.25); }
+.featured-card:nth-child(3):hover { border-color: rgba(245,185,66,0.5); box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 30px rgba(245,185,66,0.10); }
+
+.featured-card:nth-child(4) .featured-card-img {
+  background: linear-gradient(135deg, #031408, #062018, rgba(34,197,94,0.30));
+}
+.featured-card:nth-child(4) { border-color: rgba(34,197,94,0.25); }
+.featured-card:nth-child(4):hover { border-color: rgba(34,197,94,0.5); box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 30px rgba(34,197,94,0.10); }
+
+.featured-card-brand { color: var(--c-blue); }
+.featured-card-name  { color: var(--off-white); font-size: 15px; }
+.featured-card-price { font-size: 17px; font-weight: 800; color: var(--off-white); }
+
+.featured-nav-btn {
+  background: rgba(12, 25, 41, 0.9);
+  border-color: rgba(22,119,255,0.25);
+  color: var(--c-blue);
+}
+
+.featured-nav-btn:hover {
+  background: var(--c-blue);
+  border-color: var(--c-blue);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(22,119,255,0.35);
+}
+
+/* ── 12. MODAL UPGRADE ────────────────────────────────────────── */
+.modal-overlay { background: rgba(3, 6, 14, 0.88); }
+
+.modal {
+  background: #080f1e;
+  border: 1px solid rgba(22,119,255,0.22);
+  border-radius: 18px;
+  position: relative;
+  overflow: visible;
+  max-width: min(1100px, 96vw);
+}
+
+/* Gradient border glow */
+.modal::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 19px;
+  background: linear-gradient(135deg, rgba(22,119,255,0.50), rgba(124,58,237,0.30), rgba(22,119,255,0.10), transparent);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.modal-image-container {
+  background: linear-gradient(160deg, #050d1c 0%, #0d2040 60%, rgba(22,119,255,0.18) 100%);
+  border-radius: 14px;
+}
+
+.modal-name {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: var(--off-white);
+}
+
+#modalPrice {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--c-blue);
+}
+
+.modal-tab {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.modal-tab.is-active { color: var(--c-blue); }
+.modal-tab-indicator { background: var(--c-blue); }
+
+/* WA button in modal */
+#modalWA {
+  background: linear-gradient(135deg, #1fbe5b, #17993f);
+  box-shadow: 0 4px 20px rgba(31,190,91,0.30);
+  border-color: transparent;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+  justify-content: center;
+}
+
+#modalWA:hover {
+  background: linear-gradient(135deg, #25d366, #1fbe5b);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.40);
+  transform: translateY(-2px);
+}
+
+/* ── 13. TESTIMONIALS ─────────────────────────────────────────── */
+.testimonials-section {
+  position: relative;
+}
+
+.testimonials-cta {
+  background: linear-gradient(135deg, #0c1929, #10152a);
+  border: 1px solid rgba(22,119,255,0.20);
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.40);
+}
+
+.testimonials-cta-icon {
+  background: linear-gradient(135deg, rgba(22,119,255,0.15), rgba(124,58,237,0.15));
+  border-color: rgba(124,58,237,0.35);
+  color: var(--c-violet);
+}
+
+.testimonials-cta-title {
+  color: var(--off-white);
+}
+
+.testimonials-cta-sub { color: var(--stone); }
+
+/* ── 14. CONTACT SECTION ─────────────────────────────────────── */
+.contact-section {
+  background: linear-gradient(180deg, transparent 0%, rgba(22,119,255,0.04) 50%, transparent 100%);
+}
+
+/* ── 15. FOOTER ──────────────────────────────────────────────── */
+.footer {
+  background: #030912;
+  border-top: 1px solid rgba(22,119,255,0.18);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--c-blue), var(--c-violet), transparent);
+}
+
+.footer-brand-name {
+  background: linear-gradient(90deg, #fff, var(--c-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-brand-tagline { color: var(--stone-dim); }
+
+.footer-col-title {
+  color: var(--off-white);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.footer-link:hover { color: var(--c-blue); }
+
+.footer-social-link:hover { color: var(--c-cyan); }
+
+/* ── 16. FLOATING WA BUTTON ──────────────────────────────────── */
+.floating-wa {
+  background: linear-gradient(135deg, #1fbe5b, #17993f);
+  box-shadow: 0 6px 28px rgba(31,190,91,0.40), 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.floating-wa:hover {
+  background: linear-gradient(135deg, #25d366, #1fbe5b);
+  box-shadow: 0 8px 36px rgba(37,211,102,0.50), 0 2px 8px rgba(0,0,0,0.5);
+  transform: translateY(-3px);
+}
+
+.floating-wa-text { color: #fff; font-weight: 700; }
+
+/* ── 17. STICKY CTA ──────────────────────────────────────────── */
+.sticky-cta {
+  background: linear-gradient(180deg, rgba(5,11,24,0) 0%, rgba(5,11,24,0.98) 20%);
+  border-top: 1px solid rgba(22,119,255,0.22);
+}
+
+.sticky-cta-price { color: var(--off-white); font-weight: 800; font-size: 18px; }
+
+/* ── 18. SKELETON LOADERS ────────────────────────────────────── */
+.skeleton-card {
+  background: #0c1929;
+  border-color: rgba(22,119,255,0.12);
+  border-radius: 14px;
+}
+
+.skeleton-image,
+.skeleton-line {
+  background: linear-gradient(90deg, #0c1929 25%, #14263d 50%, #0c1929 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.8s infinite linear;
+}
+
+/* ── 19. TOAST ───────────────────────────────────────────────── */
+.toast {
+  background: #0c1929;
+  border-color: rgba(22,119,255,0.30);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+
+.toast--error { border-color: rgba(239,68,68,0.50); }
+.toast--success { border-color: rgba(34,197,94,0.50); }
+
+/* ── 20. LIGHT MODE ──────────────────────────────────────────── */
+body.light-mode {
+  --bg:              #f0f4fc;
+  --bg-card:         #ffffff;
+  --bg-card-hover:   #f5f8ff;
+  --off-white:       #0b1724;
+  --stone:           #3a4a60;
+  --stone-dim:       #6a7a90;
+  --border:          rgba(22, 119, 255, 0.18);
+  --border-hover:    rgba(22, 119, 255, 0.45);
+  --overlay:         rgba(240, 244, 252, 0.94);
+  --shadow-card:     0 4px 20px rgba(22, 119, 255, 0.08);
+  --shadow-hover:    0 12px 40px rgba(22, 119, 255, 0.16);
+}
+
+body.light-mode {
+  background-color: #f0f4fc;
+  background-image:
+    radial-gradient(ellipse 900px 600px at 90% -5%,  rgba(22, 119, 255, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 600px 500px at -5%  70%, rgba(34, 211, 238, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 700px 500px at 50% 110%, rgba(124, 58, 237, 0.05) 0%, transparent 55%);
+}
+
+body.light-mode .header {
+  background: rgba(240, 244, 252, 0.80);
+  border-bottom-color: rgba(22, 119, 255, 0.18);
+}
+
+body.light-mode .header.header--scrolled {
+  background: rgba(240, 244, 252, 0.96);
+  box-shadow: 0 4px 30px rgba(22, 119, 255, 0.12);
+}
+
+body.light-mode .nav-link { color: #1a2840; }
+body.light-mode .nav-link:hover { color: var(--c-blue); }
+body.light-mode .logo-text { color: #0b1724; }
+
+body.light-mode .hero-title {
+  background: linear-gradient(135deg, #0b1724 0%, #1677ff 60%, #0d99cc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .hero-subtitle { color: #3a4a60; }
+
+body.light-mode .trust-strip {
+  background: rgba(240, 244, 252, 0.92);
+}
+
+body.light-mode .trust-text strong { color: #0b1724; }
+
+body.light-mode .filters-bar {
+  background: rgba(240, 244, 252, 0.98);
+}
+
+body.light-mode .search-input {
+  background: #fff;
+  color: #0b1724;
+}
+
+body.light-mode .search-input::placeholder { color: #6a7a90; }
+
+body.light-mode .brand-select {
+  background: #fff;
+  color: #1a2840;
+}
+
+body.light-mode .product-card {
+  background: #ffffff;
+  box-shadow: 0 2px 16px rgba(22,119,255,0.06);
+}
+
+body.light-mode .card-name { color: #0b1724; }
+body.light-mode .card-brand { color: #3a4a60; }
+
+body.light-mode [data-subcategory="creatines"] .card-image {
+  background: linear-gradient(160deg, #d8e8ff 0%, #b0cfff 60%, rgba(22,119,255,0.25) 100%);
+}
+body.light-mode [data-subcategory="proteins"] .card-image {
+  background: linear-gradient(160deg, #ede0ff 0%, #d4b8f8 60%, rgba(124,58,237,0.20) 100%);
+}
+body.light-mode [data-subcategory="vitamins"] .card-image {
+  background: linear-gradient(160deg, #d0f5ff 0%, #a8ecf8 60%, rgba(34,211,238,0.20) 100%);
+}
+body.light-mode [data-subcategory="integra"] .card-image,
+body.light-mode [data-subcategory="crudda"]  .card-image,
+body.light-mode [data-subcategory="pont"]    .card-image {
+  background: linear-gradient(160deg, #fff3d8 0%, #fde8a0 60%, rgba(245,185,66,0.20) 100%);
+}
+body.light-mode [data-subcategory="combos"] .card-image {
+  background: linear-gradient(160deg, #e8d8ff 0%, #c8b0f8 60%, rgba(124,58,237,0.15) 100%);
+}
+body.light-mode [data-subcategory="accessories"] .card-image {
+  background: linear-gradient(160deg, #d8ffe8 0%, #b0f5cc 60%, rgba(34,197,94,0.20) 100%);
+}
+
+body.light-mode .featured-card {
+  background: #ffffff;
+  box-shadow: 0 2px 16px rgba(22,119,255,0.08);
+}
+
+body.light-mode .featured-card:nth-child(1) .featured-card-img {
+  background: linear-gradient(135deg, #ede0ff, #d4b8f8, rgba(124,58,237,0.25));
+}
+body.light-mode .featured-card:nth-child(2) .featured-card-img {
+  background: linear-gradient(135deg, #d8e8ff, #b0cfff, rgba(22,119,255,0.25));
+}
+body.light-mode .featured-card:nth-child(3) .featured-card-img {
+  background: linear-gradient(135deg, #fff3d8, #fde8a0, rgba(245,185,66,0.25));
+}
+body.light-mode .featured-card:nth-child(4) .featured-card-img {
+  background: linear-gradient(135deg, #d8ffe8, #b0f5cc, rgba(34,197,94,0.25));
+}
+
+body.light-mode .featured-card-name { color: #0b1724; }
+
+body.light-mode .modal { background: #f5f8ff; border-color: rgba(22,119,255,0.20); }
+body.light-mode .modal::before { background: linear-gradient(135deg, rgba(22,119,255,0.30), rgba(124,58,237,0.15), transparent); }
+body.light-mode .modal-name { color: #0b1724; }
+body.light-mode #modalPrice { color: var(--c-blue); }
+body.light-mode .modal-tab { color: #3a4a60; }
+body.light-mode .modal-tab.is-active { color: var(--c-blue); }
+body.light-mode .modal-image-container { background: linear-gradient(160deg, #d8e8ff, #b0cfff, rgba(22,119,255,0.12)); }
+
+body.light-mode .footer {
+  background: #e8eef8;
+  border-top-color: rgba(22,119,255,0.20);
+}
+body.light-mode .footer-brand-name {
+  background: linear-gradient(90deg, #0b1724, var(--c-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body.light-mode .footer-col-title { color: #0b1724; }
+body.light-mode .footer-link { color: #3a4a60; }
+body.light-mode .footer-link:hover { color: var(--c-blue); }
+
+body.light-mode .mobile-menu { background: #f0f4fc; }
+body.light-mode .mobile-nav-link { color: #0b1724; }
+body.light-mode .mobile-parent-btn { color: #0b1724; }
+
+body.light-mode .skeleton-card { background: #e8eef8; border-color: rgba(22,119,255,0.10); }
+body.light-mode .skeleton-image,
+body.light-mode .skeleton-line {
+  background: linear-gradient(90deg, #e8eef8 25%, #d8e4f4 50%, #e8eef8 75%);
+  background-size: 800px 100%;
+}
+
+body.light-mode .testimonials-cta { background: #ffffff; border-color: rgba(22,119,255,0.18); }
+body.light-mode .testimonials-cta-title { color: #0b1724; }
+
+/* ── 21. REDUCED MOTION ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  body { background-attachment: scroll; }
+  .hero-title { -webkit-text-fill-color: var(--off-white); background: none; color: var(--off-white); }
+}
+
+/* ── 22. RESPONSIVE FIXES ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-title { -webkit-text-fill-color: transparent; }
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary { padding: 13px 22px; font-size: 13px; }
+  .modal { border-radius: 16px 16px 0 0; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PRODUCT PAGES — Category theme system
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── 23. PRODUCT PAGE THEME VARIABLES ────────────────────────── */
+.product-page {
+  --product-accent:           #1677ff;
+  --product-accent-secondary: #22d3ee;
+  --product-accent-rgb:       22, 119, 255;
+}
+
+.product-page[data-product-theme="creatines"] {
+  --product-accent:           #1677ff;
+  --product-accent-secondary: #22d3ee;
+  --product-accent-rgb:       22, 119, 255;
+}
+
+.product-page[data-product-theme="proteins"] {
+  --product-accent:           #7c3aed;
+  --product-accent-secondary: #ec4899;
+  --product-accent-rgb:       124, 58, 237;
+}
+
+.product-page[data-product-theme="vitamins"] {
+  --product-accent:           #22d3ee;
+  --product-accent-secondary: #14b8a6;
+  --product-accent-rgb:       34, 211, 238;
+}
+
+.product-page[data-product-theme="protein-bars"] {
+  --product-accent:           #ff7a18;
+  --product-accent-secondary: #f5b942;
+  --product-accent-rgb:       255, 122, 24;
+}
+
+.product-page[data-product-theme="combos"] {
+  --product-accent:           #1677ff;
+  --product-accent-secondary: #7c3aed;
+  --product-accent-rgb:       22, 119, 255;
+}
+
+.product-page[data-product-theme="accessories"] {
+  --product-accent:           #22c55e;
+  --product-accent-secondary: #22d3ee;
+  --product-accent-rgb:       34, 197, 94;
+}
+
+/* ── 24. PAGE BACKGROUND — aurora using product accent ───────── */
+.product-page body,
+body.product-page {
+  background-image:
+    radial-gradient(ellipse 700px 500px at 85% -5%,  rgba(var(--product-accent-rgb), 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 500px 400px at -5%  65%, rgba(var(--product-accent-rgb), 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 600px 400px at 55% 105%, rgba(var(--product-accent-rgb), 0.07) 0%, transparent 55%);
+}
+
+/* ── 25. PRODUCT IMAGE STAGE ─────────────────────────────────── */
+.pp-image-col {
+  position: sticky;
+  top: calc(68px + 20px);
+  align-self: start;
+  width: 100%;
+}
+
+.pp-image-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: clamp(16px, 3vw, 34px);
+  overflow: hidden;
+
+  border-radius: 28px;
+  border: 1px solid rgba(var(--product-accent-rgb), 0.68);
+
+  background:
+    radial-gradient(
+      circle at 50% 46%,
+      rgba(var(--product-accent-rgb), 0.20),
+      transparent 58%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(var(--product-accent-rgb), 0.08),
+      rgba(5, 11, 24, 0.98) 68%
+    );
+
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pp-image-stage:hover {
+  border-color: rgba(var(--product-accent-rgb), 0.85);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.40),
+    0 0 60px rgba(var(--product-accent-rgb), 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Zoom-in hint icon on hover */
+.pp-image-stage::after {
+  content: '⊕';
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  font-size: 18px;
+  color: rgba(var(--product-accent-rgb), 0.60);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.pp-image-stage:hover::after { opacity: 1; transform: translateY(0); }
+
+/* ── 26. WHITE IMAGE SURFACE ─────────────────────────────────── */
+.pp-image-surface {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  border: 0;
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: #ffffff;
+  cursor: zoom-in;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.22),
+    0 0 38px rgba(var(--product-accent-rgb), 0.10);
+}
+
+.pp-image-surface:focus-visible {
+  outline: 2px solid rgba(var(--product-accent-rgb), 0.80);
+  outline-offset: 3px;
+}
+
+/* ── 27. PRODUCT IMAGE ────────────────────────────────────────── */
+.pp-product-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+
+  object-fit: contain;
+  object-position: var(--product-image-position, center);
+
+  transform: scale(var(--product-image-scale, 1));
+  transform-origin: center;
+
+  background: #ffffff;
+
+  transition: transform 260ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp-image-surface:hover .pp-product-image {
+    transform: scale(calc(var(--product-image-scale, 1) * 1.015));
+  }
+}
+
+/* ── 28. PRODUCT PAGE INFO — accent-aware ────────────────────── */
+.product-page .pp-wrap {
+  align-items: start;
+}
+
+.product-page .card-brand {
+  color: rgba(var(--product-accent-rgb), 0.88);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.product-page .pp-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--product-accent);
+  letter-spacing: -0.01em;
+}
+
+.product-page .pp-info h1 {
+  font-size: clamp(26px, 4vw, 40px);
+  color: var(--off-white);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+}
+
+.product-page .pp-desc { color: var(--stone); font-size: 15px; line-height: 1.7; }
+
+.product-page .modal-chars-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.product-page .modal-chars-table tr {
+  border-bottom: 1px solid rgba(var(--product-accent-rgb), 0.12);
+}
+
+.product-page .modal-chars-table tr:last-child { border-bottom: none; }
+
+.product-page .modal-chars-table th {
+  text-align: left;
+  padding: 9px 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(var(--product-accent-rgb), 0.70);
+  width: 38%;
+}
+
+.product-page .modal-chars-table td {
+  text-align: right;
+  padding: 9px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--off-white);
+}
+
+.product-page .pp-breadcrumb a:hover { color: var(--product-accent); }
+
+.product-page .pp-breadcrumb a { color: var(--stone-dim); }
+
+.product-page .pp-extra-section > h2 {
+  border-left-color: var(--product-accent);
+}
+
+.product-page .pp-box-title { color: var(--product-accent); }
+
+.product-page .pp-info-card h3 { color: var(--product-accent); }
+
+.product-page .pp-info-card {
+  background: #0c1929;
+  border: 1px solid rgba(var(--product-accent-rgb), 0.18);
+}
+
+.product-page .pp-nutrition-box {
+  background: #0c1929;
+  border: 1px solid rgba(var(--product-accent-rgb), 0.18);
+}
+
+.product-page .pp-extra-section > h2 { color: var(--off-white); }
+
+/* Secondary action button uses accent */
+.product-page .btn-outline {
+  border-color: rgba(var(--product-accent-rgb), 0.40);
+  color: var(--product-accent);
+}
+
+.product-page .btn-outline:hover {
+  background: rgba(var(--product-accent-rgb), 0.10);
+  border-color: var(--product-accent);
+}
+
+/* Sticky CTA accent border */
+.product-page .pp-sticky-cta {
+  border-top: 1px solid rgba(var(--product-accent-rgb), 0.30);
+  background: linear-gradient(180deg, rgba(5,11,24,0) 0%, rgba(5,11,24,0.98) 20%);
+}
+
+.product-page .pp-sticky-price {
+  color: var(--product-accent);
+  font-weight: 800;
+  font-size: 17px;
+}
+
+/* Contact section accent */
+.product-page .contact-section .section-label {
+  color: var(--product-accent);
+}
+
+/* ── 29. PRODUCT IMAGE LIGHTBOX ──────────────────────────────── */
+.pp-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 6, 14, 0.93);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.26s ease, visibility 0s 0.26s;
+}
+
+.pp-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.26s ease;
+}
+
+.pp-lightbox-surface {
+  display: grid;
+  place-items: center;
+  width: min(92vw, 900px);
+  height: min(88vh, 900px);
+  overflow: hidden;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.65);
+}
+
+.pp-lightbox-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.pp-lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  color: #fff;
+  font-size: 18px;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.pp-lightbox-close:hover { background: rgba(255,255,255,0.20); }
+.pp-lightbox-close:focus-visible { outline: 2px solid rgba(var(--product-accent-rgb,22,119,255),0.80); outline-offset: 3px; }
+
+/* ── 30. MOBILE PRODUCT PAGE ─────────────────────────────────── */
+@media (max-width: 700px) {
+  .pp-image-col { position: static; }
+
+  .pp-image-stage {
+    aspect-ratio: 1 / 1;
+    padding: 12px;
+    border-radius: 22px;
+    margin-bottom: 0;
+  }
+
+  .pp-image-surface {
+    border-radius: 16px;
+  }
+
+  .product-page .pp-price { font-size: 1.8rem; }
+  .product-page .pp-info h1 { font-size: clamp(22px, 6vw, 30px); }
+}
+
+/* ── 31. LIGHT MODE — product pages ─────────────────────────── */
+body.light-mode.product-page,
+body.light-mode .product-page {
+  background-image:
+    radial-gradient(ellipse 700px 500px at 85% -5%,  rgba(var(--product-accent-rgb), 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 500px 400px at -5%  65%, rgba(var(--product-accent-rgb), 0.05) 0%, transparent 55%);
+}
+
+body.light-mode .pp-image-stage {
+  background:
+    radial-gradient(circle at 50% 45%,
+      rgba(var(--product-accent-rgb), 0.18) 0%,
+      transparent 50%),
+    linear-gradient(145deg,
+      rgba(var(--product-accent-rgb), 0.08) 0%,
+      #e8eef8 65%);
+  border-color: rgba(var(--product-accent-rgb), 0.25);
+}
+
+body.light-mode .pp-image-surface {
+  background: #ffffff;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12), 0 0 36px rgba(var(--product-accent-rgb), 0.12);
+}
+
+body.light-mode .product-page .pp-info h1 { color: #0b1724; }
+body.light-mode .product-page .pp-price { color: var(--product-accent); }
+body.light-mode .product-page .pp-desc { color: #3a4a60; }
+body.light-mode .product-page .modal-chars-table td { color: #0b1724; }
+body.light-mode .product-page .pp-info-card { background: #ffffff; }
+body.light-mode .product-page .pp-nutrition-box { background: #ffffff; }
+
+/* ── 32. REDUCED MOTION — product pages ─────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .pp-image-stage, .pp-product-image { transition: none; }
+  .pp-lightbox { transition: none; }
+}
+

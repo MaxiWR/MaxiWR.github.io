@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BANCO DE SUPLEMENTOS</title>
+  <link rel="icon" type="image/png" href="icono.png" />
+  <meta name="description" content="Catálogo de suplementos deportivos en CABA: proteínas, creatinas, vitaminas, omega 3, magnesio, barritas proteicas y combos. Consultá stock y precios por WhatsApp." />
+
+  <!-- Replace this placeholder with the exact token provided by Google Search Console -->
+  <meta name="google-site-verification" content="REPLACE_WITH_REAL_SEARCH_CONSOLE_TOKEN" />
+
+  <link rel="canonical" href="[FINAL_SITE_URL]/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Banco de Suplementos | Proteínas, Creatinas y Vitaminas" />
+  <meta property="og:description" content="Catálogo de suplementos deportivos y snacks proteicos en CABA. Consultá stock, precios y promociones." />
+  <meta property="og:image" content="[FINAL_SITE_URL]/banco-suplementos-og.webp" />
+  <meta property="og:image:alt" content="Catálogo de El Banco Suplementos" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="[FINAL_SITE_URL]/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="El Banco Suplementos" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Banco de Suplementos | Proteínas, Creatinas y Vitaminas" />
+  <meta name="twitter:description" content="Catálogo de suplementos deportivos y snacks proteicos en CABA." />
+  <meta name="twitter:image" content="[FINAL_SITE_URL]/banco-suplementos-og.webp" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "[FINAL_SITE_URL]/#organization",
+        "name": "El Banco Suplementos",
+        "url": "[FINAL_SITE_URL]/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "[FINAL_SITE_URL]/icono.png"
+        },
+        "sameAs": [
+          "https://www.instagram.com/bancodesuplementos"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "[FINAL_SITE_URL]/#website",
+        "url": "[FINAL_SITE_URL]/",
+        "name": "El Banco Suplementos",
+        "inLanguage": "es-AR",
+        "publisher": {
+          "@id": "[FINAL_SITE_URL]/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="design.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="logo-link">
+        <div class="logo">
+          <img src="icono.png" class="logo-icon" width="36" height="36" alt="El Banco Suplementos" />
+          <span class="logo-text">
+            <span class="logo-text-main">EL BANCO</span>
+            <span class="logo-text-sub">SUPLEMENTOS</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link">Inicio</a></li>
+
+          <li class="has-dropdown">
+            <a href="#proteins" class="nav-link">
+              Suplementos <span class="chevron" aria-hidden="true">&#9660;</span>
+            </a>
+            <ul class="dropdown" aria-label="Submenú de suplementos">
+              <li><a href="#creatines" data-filter="creatines">Creatinas</a></li>
+              <li><a href="#proteins"  data-filter="proteins">Proteínas</a></li>
+              <li><a href="#vitamins"  data-filter="vitamins">Vitaminas</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="#protein-bars" class="nav-link">
+              Barras de Proteína <span class="chevron" aria-hidden="true">&#9660;</span>
+            </a>
+            <ul class="dropdown" aria-label="Submenú de barras de proteína">
+              <li><a href="#protein-bars" data-filter="integra">Integra</a></li>
+              <li><a href="#protein-bars" data-filter="crudda">Crudda</a></li>
+              <li><a href="#protein-bars" data-filter="pont">Pont</a></li>
+              <li><a href="#combos" data-filter="combos">Combos</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#accessories" class="nav-link">Accesorios</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Social / external buttons -->
+      <div class="header-socials">
+        <a href="https://wa.me/5491124602875?text=Hola%2C%20quiero%20consultar%20por%20productos%20del%20Banco%20de%20Suplementos" target="_blank" rel="noopener noreferrer"
+           class="social-btn social-btn--wa" title="WhatsApp" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <span class="social-btn-label">WhatsApp</span>
+        </a>
+        <a href="https://www.instagram.com/bancodesuplementos?igsh=MW1wYTc2aGF2YjA0ZQ==" target="_blank" rel="noopener noreferrer"
+           class="social-btn social-btn--ig" title="Instagram" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+          <span class="social-btn-label">Instagram</span>
+        </a>
+      </div>
+
+      <!-- Theme toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar a modo claro">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════
+       MOBILE MENU
+  ══════════════════════════════════════════════════════════ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav">
+      <a href="#hero" class="mobile-nav-link">Inicio</a>
+
+      <div class="mobile-nav-group">
+        <button class="mobile-parent-btn" aria-expanded="false">
+          Suplementos <span class="chevron" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="mobile-submenu">
+          <a href="#creatines" data-filter="creatines" class="mobile-sub-link">Creatinas</a>
+          <a href="#proteins"  data-filter="proteins"  class="mobile-sub-link">Proteínas</a>
+          <a href="#vitamins"  data-filter="vitamins"  class="mobile-sub-link">Vitaminas</a>
+        </div>
+      </div>
+
+      <div class="mobile-nav-group">
+        <button class="mobile-parent-btn" aria-expanded="false">
+          Barras de Proteína <span class="chevron" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="mobile-submenu">
+          <a href="#protein-bars" data-filter="integra" class="mobile-sub-link">Integra</a>
+          <a href="#protein-bars" data-filter="crudda"  class="mobile-sub-link">Crudda</a>
+          <a href="#protein-bars" data-filter="pont"    class="mobile-sub-link">Pont</a>
+          <a href="#combos"       data-filter="combos"  class="mobile-sub-link">Combos</a>
+        </div>
+      </div>
+
+      <a href="#accessories" class="mobile-nav-link">Accesorios</a>
+      <a href="#contact" class="mobile-nav-link">Contacto</a>
+
+      <div class="mobile-socials">
+        <a href="https://wa.me/5491124602875?text=Hola%2C%20quiero%20consultar%20por%20productos%20del%20Banco%20de%20Suplementos" target="_blank" rel="noopener noreferrer" class="mobile-social-link">WhatsApp</a>
+        <a href="https://www.instagram.com/bancodesuplementos?igsh=MW1wYTc2aGF2YjA0ZQ==" target="_blank" rel="noopener noreferrer" class="mobile-social-link">Instagram</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-spotlight" aria-hidden="true"></div>
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-label">CATÁLOGO DE SUPLEMENTOS PREMIUM</span>
+        <h1 class="hero-title">
+          INVERTÍ EN<br>
+          SUPLEMENTOS<br>
+          COBRÁ EN RESULTADOS
+        </h1>
+        <p class="hero-subtitle">
+          Un catálogo seleccionado de proteínas, creatinas, vitaminas y snacks proteicos
+          diseñados para potenciar tus resultados.
+        </p>
+        <div class="hero-buttons">
+          <a href="#creatines" class="btn btn-primary">Ver Productos</a>
+          <a href="https://wa.me/5491124602875?text=Hola%2C%20quiero%20consultar%20por%20productos%20del%20Banco%20de%20Suplementos" target="_blank" rel="noopener noreferrer"
+             class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="hero-card hero-card--1">
+          <div class="hero-card-img"></div>
+          <div class="hero-card-body">
+            <div class="hero-card-tag"></div>
+            <div class="hero-card-line hero-card-line--lg"></div>
+            <div class="hero-card-line"></div>
+            <div class="hero-card-line hero-card-line--sm"></div>
+          </div>
+        </div>
+        <div class="hero-card hero-card--2">
+          <div class="hero-card-img"></div>
+          <div class="hero-card-body">
+            <div class="hero-card-tag"></div>
+            <div class="hero-card-line hero-card-line--lg"></div>
+            <div class="hero-card-line"></div>
+            <div class="hero-card-line hero-card-line--sm"></div>
+          </div>
+        </div>
+        <div class="hero-card hero-card--3">
+          <div class="hero-card-img"></div>
+          <div class="hero-card-body">
+            <div class="hero-card-tag"></div>
+            <div class="hero-card-line hero-card-line--lg"></div>
+            <div class="hero-card-line"></div>
+            <div class="hero-card-line hero-card-line--sm"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       TRUST STRIP
+  ══════════════════════════════════════════════════════════ -->
+  <section class="trust-strip" aria-label="Por qué elegirnos">
+    <div class="trust-inner">
+
+      <div class="trust-item">
+        <div class="trust-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Marcas reconocidas</strong>
+          <span>Solo productos de calidad comprobada</span>
+        </div>
+      </div>
+
+      <div class="trust-divider" aria-hidden="true"></div>
+
+      <div class="trust-item">
+        <div class="trust-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Respuesta inmediata</strong>
+          <span>Consultá stock y precios al instante</span>
+        </div>
+      </div>
+
+      <div class="trust-divider" aria-hidden="true"></div>
+
+      <div class="trust-item">
+        <div class="trust-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 12 20 22 4 22 4 12"/>
+            <rect x="2" y="7" width="20" height="5"/>
+            <line x1="12" y1="22" x2="12" y2="7"/>
+            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Combos exclusivos</strong>
+          <span>Ahorrá con nuestros packs armados</span>
+        </div>
+      </div>
+
+      <div class="trust-divider" aria-hidden="true"></div>
+
+      <div class="trust-item">
+        <div class="trust-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Asesoramiento real</strong>
+          <span>Te ayudamos a elegir lo que necesitás</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FEATURED PRODUCTS CAROUSEL
+  ══════════════════════════════════════════════════════════ -->
+  <section class="featured-section" id="featuredSection" style="display:none" aria-labelledby="featuredTitle">
+    <div class="featured-inner">
+      <div class="featured-header">
+        <span class="section-label">Lo más pedido</span>
+        <h2 class="section-title" id="featuredTitle">LOS MÁS ELEGIDOS</h2>
+      </div>
+      <div class="featured-carousel-wrap">
+        <button class="featured-nav-btn featured-prev" id="featuredPrev" aria-label="Productos anteriores">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <div class="featured-carousel" id="featuredCarousel" role="list" aria-label="Productos destacados"></div>
+        <button class="featured-nav-btn featured-next" id="featuredNext" aria-label="Productos siguientes">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FILTERS BAR
+  ══════════════════════════════════════════════════════════ -->
+  <div class="filters-bar" id="filtersBar">
+    <div class="filters-inner">
+      <div class="search-wrapper">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Buscar productos..."
+          autocomplete="off"
+          aria-label="Buscar productos"
+        />
+      </div>
+      <div class="filter-pills" role="group" aria-label="Filtrar por categoría">
+        <button class="pill active" data-filter="all">Todos</button>
+        <button class="pill" data-filter="creatines">Creatinas</button>
+        <button class="pill" data-filter="proteins">Proteínas</button>
+        <button class="pill" data-filter="vitamins">Vitaminas</button>
+        <button class="pill" data-filter="protein-bars">Barras de Proteína</button>
+        <button class="pill" data-filter="combos">Combos</button>
+        <button class="pill" data-filter="accessories">Accesorios</button>
+      </div>
+      <select class="brand-select" id="brandSelect" aria-label="Filtrar por marca">
+        <option value="all">Todas las Marcas</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       MAIN CATALOG
+  ══════════════════════════════════════════════════════════ -->
+  <main class="catalog" id="catalog">
+
+    <!-- Creatines -->
+    <section class="product-section" id="creatines" data-section="creatines">
+      <div class="section-header">
+        <div class="section-label">Suplementos</div>
+        <h2 class="section-title">Creatinas</h2>
+        <p class="section-desc">El suplemento de rendimiento más estudiado. Probado para aumentar la fuerza, la potencia y la masa muscular magra.</p>
+      </div>
+      <div class="product-grid" id="grid-creatines"></div>
+    </section>
+
+    <!-- Proteins -->
+    <section class="product-section" id="proteins" data-section="proteins">
+      <div class="section-header">
+        <div class="section-label">Suplementos</div>
+        <h2 class="section-title">Proteínas</h2>
+        <p class="section-desc">Concentrados y aislados de suero premium. Potenciá la recuperación y el crecimiento muscular con cada dosis.</p>
+      </div>
+      <div class="product-grid" id="grid-proteins"></div>
+    </section>
+
+    <!-- Vitamins -->
+    <section class="product-section" id="vitamins" data-section="vitamins">
+      <div class="section-header">
+        <div class="section-label">Suplementos</div>
+        <h2 class="section-title">Vitaminas</h2>
+        <p class="section-desc">Micronutrientes para la salud, la inmunidad y la recuperación. La base que hace funcionar todo lo demás.</p>
+      </div>
+      <div class="product-grid" id="grid-vitamins"></div>
+    </section>
+
+    <!-- Protein Bars -->
+    <section class="product-section" id="protein-bars" data-section="protein-bars">
+      <div class="section-header">
+        <div class="section-label">Barras de Proteína</div>
+        <h2 class="section-title">Barras de Proteína</h2>
+        <p class="section-desc">Integra, Crudda, Pont y Otros. Snacks altos en proteína que tienen tan buen sabor como rendimiento.</p>
+      </div>
+      <div class="product-grid" id="grid-protein-bars"></div>
+    </section>
+
+    <!-- Combos -->
+    <section class="product-section" id="combos" data-section="combos">
+      <div class="section-header">
+        <div class="section-label">Destacados</div>
+        <h2 class="section-title">Combos Destacados</h2>
+        <p class="section-desc">Proteínas, barritas, creatina y accesorios seleccionados para acompañar tu rutina con mejor precio y más practicidad.</p>
+      </div>
+      <div class="product-grid" id="grid-combos"></div>
+    </section>
+
+    <!-- Accessories -->
+    <section class="product-section" id="accessories" data-section="accessories">
+      <div class="section-header">
+        <div class="section-label">Accesorios</div>
+        <h2 class="section-title">Accesorios</h2>
+        <p class="section-desc">Shakeres y accesorios deportivos para complementar tu rutina de suplementación.</p>
+      </div>
+      <div class="product-grid" id="grid-accessories"></div>
+    </section>
+
+    <!-- No Results -->
+    <div class="no-results" id="noResults" style="display:none">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <p>No se encontraron productos.</p>
+      <span>Probá con otra búsqueda o filtro.</span>
+    </div>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="testimonials-section" id="testimonialsSection" aria-labelledby="testimonialsTitle">
+    <div class="testimonials-inner">
+      <span class="section-label">Comunidad</span>
+      <h2 class="section-title" id="testimonialsTitle">Lo que dicen nuestros clientes</h2>
+
+      <div class="testimonials-cta">
+        <div class="testimonials-cta-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </div>
+        <p class="testimonials-cta-title">¿Ya compraste en El Banco?</p>
+        <p class="testimonials-cta-sub">
+          Estamos construyendo nuestra comunidad. Contanos tu experiencia
+          y te publicamos en nuestras redes.
+        </p>
+        <a href="https://wa.me/5491124602875?text=Hola%2C%20quiero%20dejar%20mi%20rese%C3%B1a%20de%20El%20Banco%20Suplementos%21"
+           target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3-8.413z"/>
+          </svg>
+          Dejá tu reseña por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════════════════════════ -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <span class="section-label">Contacto</span>
+      <h2 class="contact-title">¿Querés consultar stock y precios?</h2>
+      <p class="contact-text">
+        Contactanos por WhatsApp o seguinos en Instagram para ver novedades,
+        promos y combos.
+      </p>
+      <div class="contact-buttons">
+        <a href="https://wa.me/5491124602875?text=Hola%2C%20quiero%20consultar%20por%20productos%20del%20Banco%20de%20Suplementos" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <a href="https://www.instagram.com/bancodesuplementos?igsh=MW1wYTc2aGF2YjA0ZQ==" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="icono.png" class="logo-icon" width="30" height="30" alt="El Banco Suplementos" />
+          <span class="logo-text">
+            <span class="logo-text-main">EL BANCO</span>
+            <span class="logo-text-sub">SUPLEMENTOS</span>
+          </span>
+        </div>
+        <p class="footer-tagline">Suplementos premium.<br>Resultados serios.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Productos</h4>
+        <ul class="footer-list">
+          <li><a href="#creatines">Creatinas</a></li>
+          <li><a href="#proteins">Proteínas</a></li>
+          <li><a href="#vitamins">Vitaminas</a></li>
+          <li><a href="#protein-bars">Barras de Proteína</a></li>
+          <li><a href="#combos">Combos</a></li>
+          <li><a href="#accessories">Accesorios</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Marcas</h4>
+        <ul class="footer-list">
+          <li><a href="#creatines">Star Nutrition · Granger</a></li>
+          <li><a href="#proteins">Gentech · Gold Nutrition</a></li>
+          <li><a href="#vitamins">Natier · ENA</a></li>
+          <li><a href="#protein-bars">Integra · Crudda · Pont</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Encontranos</h4>
+        <ul class="footer-list">
+          <li><a href="https://wa.me/5491124602875?text=Hola%2C%20quiero%20consultar%20por%20productos%20del%20Banco%20de%20Suplementos" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/bancodesuplementos?igsh=MW1wYTc2aGF2YjA0ZQ==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">Catálogo informativo. La disponibilidad y los precios pueden variar.</p>
+      <p class="footer-copy">&copy; 2026 El Banco Suplementos</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════
+       PRODUCT DETAIL MODAL (Premium)
+  ══════════════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="modal" id="modal">
+
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="modal-body">
+
+        <!-- Left: image -->
+        <div class="modal-image-col">
+          <div class="modal-image-container" id="modalImageBg">
+            <div class="modal-image">
+              <span class="modal-badge" id="modalBadge" style="display:none"></span>
+              <span class="modal-stock-tag" id="modalStockTag"></span>
+              <img id="modalImg" src="" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: info + tabs -->
+        <div class="modal-info-col">
+
+          <div class="modal-info-head">
+            <h2 class="modal-product-name" id="modalName"></h2>
+            <p class="modal-brand" id="modalBrand"></p>
+            <p class="modal-price" id="modalPrice"></p>
+          </div>
+
+          <table class="modal-chars-table" id="modalCharsTable" aria-label="Características del producto"></table>
+
+          <!-- Tab navigation -->
+          <div class="modal-tabs-wrap">
+            <div class="modal-tabs" role="tablist" aria-label="Información del producto">
+              <button class="modal-tab is-active" id="mtab-btn-desc" role="tab"
+                      aria-selected="true" aria-controls="mtab-desc" data-mtab="desc">
+                Descripción
+              </button>
+              <button class="modal-tab" id="mtab-btn-use" role="tab"
+                      aria-selected="false" aria-controls="mtab-use" data-mtab="use" hidden>
+                Cómo Usarlo
+              </button>
+              <button class="modal-tab" id="mtab-btn-goal" role="tab"
+                      aria-selected="false" aria-controls="mtab-goal" data-mtab="goal" hidden>
+                Beneficios
+              </button>
+              <button class="modal-tab" id="mtab-btn-nutr" role="tab"
+                      aria-selected="false" aria-controls="mtab-nutr" data-mtab="nutr" hidden>
+                Nutricional
+              </button>
+              <span class="modal-tab-indicator" id="modalTabIndicator" aria-hidden="true"></span>
+            </div>
+
+            <div class="modal-tab-panels">
+              <div class="modal-tab-panel is-active" id="mtab-desc"
+                   role="tabpanel" aria-labelledby="mtab-btn-desc">
+                <p id="modalDescription"></p>
+              </div>
+              <div class="modal-tab-panel" id="mtab-use"
+                   role="tabpanel" aria-labelledby="mtab-btn-use">
+                <p id="modalHowToUse"></p>
+              </div>
+              <div class="modal-tab-panel" id="mtab-goal"
+                   role="tabpanel" aria-labelledby="mtab-btn-goal">
+                <p id="modalGoalDesc"></p>
+              </div>
+              <div class="modal-tab-panel" id="mtab-nutr"
+                   role="tabpanel" aria-labelledby="mtab-btn-nutr">
+                <img id="modalNutritionImg" src="" alt="" class="modal-nutrition-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="modal-links">
+            <a href="#" id="modalWA" target="_blank" rel="noopener noreferrer"
+               class="btn btn-whatsapp btn-modal-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Consultar por este producto
+            </a>
+            <a href="#" id="modalProductPage"
+               class="btn btn-outline btn-modal-secondary"
+               aria-label="Ver página completa del producto">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="9" y1="15" x2="15" y2="15"/>
+                <line x1="12" y1="12" x2="12" y2="18"/>
+              </svg>
+              Ver Producto
+            </a>
+          </div>
+
+          <!-- Related products -->
+          <div class="modal-related" id="modalRelated" style="display:none">
+            <h3 class="modal-related-title">También te puede interesar</h3>
+            <div class="modal-related-list" id="modalRelatedList"></div>
+          </div>
+
+        </div><!-- end modal-info-col -->
+      </div><!-- end modal-body -->
+    </div><!-- end modal -->
+  </div><!-- end modalOverlay -->
+
+  <!-- ══════════════════════════════════════════════════════
+       FLOATING WHATSAPP BUTTON
+  ══════════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/5491124602875?text=Hola%2C%20quiero%20consultar%20por%20productos%20del%20Banco%20de%20Suplementos" class="floating-wa" id="floatingWA"
+     target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="floating-wa-text">Consultá por WhatsApp</span>
+  </a>
+
+  <!-- ══════════════════════════════════════════════════════
+       STICKY MOBILE CTA (shown only when modal is open)
+  ══════════════════════════════════════════════════════════ -->
+  <div class="sticky-cta" id="stickyCTA" aria-hidden="true" aria-live="polite">
+    <div class="sticky-cta-info">
+      <span class="sticky-cta-label">Precio</span>
+      <span class="sticky-cta-price" id="stickyCTAPrice"></span>
+    </div>
+    <a href="#" class="btn btn-whatsapp sticky-cta-btn" id="stickyCTABtn"
+       target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Consultar
+    </a>
+  </div>
+
+  <!-- Toast notifications -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

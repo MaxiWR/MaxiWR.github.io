@@ -1,0 +1,85 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Generate product pages and sitemap
+        run: node scripts/generate-product-pages.mjs
+
+      - name: Validate — no /productos/ references in generated pages
+        run: |
+          ERRORS=0
+          for FILE in *.html; do
+            [ "$FILE" = "index.html" ] && continue
+            if grep -q "productos/" "$FILE" 2>/dev/null; then
+              echo "ERROR: $FILE contains a /productos/ reference"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+          if [ "$ERRORS" -gt 0 ]; then
+            echo "Validation failed: $ERRORS file(s) with /productos/ references"
+            exit 1
+          fi
+          echo "OK: No /productos/ references found in generated pages."
+
+      - name: Validate — all active products have a generated page
+        run: |
+          node -e "
+          const fs = require('fs');
+          const products = JSON.parse(fs.readFileSync('products.json', 'utf8'))
+            .filter(p => p.active !== false);
+          let errors = 0;
+          for (const p of products) {
+            if (!fs.existsSync(p.slug + '.html')) {
+              console.error('MISSING: ' + p.slug + '.html');
+              errors++;
+            }
+          }
+          if (errors > 0) {
+            console.error('Validation failed: ' + errors + ' product page(s) missing.');
+            process.exit(1);
+          }
+          console.log('OK: All ' + products.length + ' active products have generated pages.');
+          "
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
