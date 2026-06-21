@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es-AR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Banco de Suplementos | Proteínas, Creatinas y Vitaminas en CABA</title>
+  <title>BANCO DE SUPLEMENTOS</title>
+  <link rel="icon" type="image/png" href="icono.png" />
   <meta name="description" content="Catálogo de suplementos deportivos en CABA: proteínas, creatinas, vitaminas, omega 3, magnesio, barritas proteicas y combos. Consultá stock y precios por WhatsApp." />
 
   <!-- Replace this placeholder with the exact token provided by Google Search Console -->
@@ -66,6 +67,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="design.css" />
 </head>
 <body>
 
@@ -205,6 +207,7 @@
        HERO
   ══════════════════════════════════════════════════════════ -->
   <section class="hero" id="hero">
+    <div class="hero-spotlight" aria-hidden="true"></div>
     <div class="hero-bg-pattern" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="hero-content">
@@ -265,6 +268,99 @@
   </section>
 
   <!-- ══════════════════════════════════════════════════════
+       TRUST STRIP
+  ══════════════════════════════════════════════════════════ -->
+  <section class="trust-strip" aria-label="Por qué elegirnos">
+    <div class="trust-inner">
+
+      <div class="trust-item">
+        <div class="trust-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Marcas reconocidas</strong>
+          <span>Solo productos de calidad comprobada</span>
+        </div>
+      </div>
+
+      <div class="trust-divider" aria-hidden="true"></div>
+
+      <div class="trust-item">
+        <div class="trust-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Respuesta inmediata</strong>
+          <span>Consultá stock y precios al instante</span>
+        </div>
+      </div>
+
+      <div class="trust-divider" aria-hidden="true"></div>
+
+      <div class="trust-item">
+        <div class="trust-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 12 20 22 4 22 4 12"/>
+            <rect x="2" y="7" width="20" height="5"/>
+            <line x1="12" y1="22" x2="12" y2="7"/>
+            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Combos exclusivos</strong>
+          <span>Ahorrá con nuestros packs armados</span>
+        </div>
+      </div>
+
+      <div class="trust-divider" aria-hidden="true"></div>
+
+      <div class="trust-item">
+        <div class="trust-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Asesoramiento real</strong>
+          <span>Te ayudamos a elegir lo que necesitás</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FEATURED PRODUCTS CAROUSEL
+  ══════════════════════════════════════════════════════════ -->
+  <section class="featured-section" id="featuredSection" style="display:none" aria-labelledby="featuredTitle">
+    <div class="featured-inner">
+      <div class="featured-header">
+        <span class="section-label">Lo más pedido</span>
+        <h2 class="section-title" id="featuredTitle">LOS MÁS ELEGIDOS</h2>
+      </div>
+      <div class="featured-carousel-wrap">
+        <button class="featured-nav-btn featured-prev" id="featuredPrev" aria-label="Productos anteriores">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <div class="featured-carousel" id="featuredCarousel" role="list" aria-label="Productos destacados"></div>
+        <button class="featured-nav-btn featured-next" id="featuredNext" aria-label="Productos siguientes">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
        FILTERS BAR
   ══════════════════════════════════════════════════════════ -->
   <div class="filters-bar" id="filtersBar">
@@ -293,15 +389,6 @@
       </div>
       <select class="brand-select" id="brandSelect" aria-label="Filtrar por marca">
         <option value="all">Todas las Marcas</option>
-        <option value="Star Nutrition">Star Nutrition</option>
-        <option value="Granger">Granger</option>
-        <option value="Gentech">Gentech</option>
-        <option value="Gold Nutrition">Gold Nutrition</option>
-        <option value="Natier">Natier</option>
-        <option value="ENA">ENA</option>
-        <option value="Integra">Integra</option>
-        <option value="Crudda">Crudda</option>
-        <option value="Pont">Pont</option>
       </select>
     </div>
   </div>
@@ -383,6 +470,36 @@
   </main>
 
   <!-- ══════════════════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="testimonials-section" id="testimonialsSection" aria-labelledby="testimonialsTitle">
+    <div class="testimonials-inner">
+      <span class="section-label">Comunidad</span>
+      <h2 class="section-title" id="testimonialsTitle">Lo que dicen nuestros clientes</h2>
+
+      <div class="testimonials-cta">
+        <div class="testimonials-cta-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </div>
+        <p class="testimonials-cta-title">¿Ya compraste en El Banco?</p>
+        <p class="testimonials-cta-sub">
+          Estamos construyendo nuestra comunidad. Contanos tu experiencia
+          y te publicamos en nuestras redes.
+        </p>
+        <a href="https://wa.me/5491124602875?text=Hola%2C%20quiero%20dejar%20mi%20rese%C3%B1a%20de%20El%20Banco%20Suplementos%21"
+           target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3-8.413z"/>
+          </svg>
+          Dejá tu reseña por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
        CONTACT SECTION
   ══════════════════════════════════════════════════════════ -->
   <section class="contact-section" id="contact">
@@ -460,54 +577,95 @@
   </footer>
 
   <!-- ══════════════════════════════════════════════════════
-       PRODUCT DETAIL MODAL
+       PRODUCT DETAIL MODAL (Premium)
   ══════════════════════════════════════════════════════════ -->
   <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalName">
     <div class="modal" id="modal">
+
       <button class="modal-close" id="modalClose" aria-label="Cerrar">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
         </svg>
       </button>
+
       <div class="modal-body">
 
-        <!-- Left: image + nutrition -->
+        <!-- Left: image -->
         <div class="modal-image-col">
-          <div class="modal-image" id="modalImage">
-            <img id="modalImg" src="" alt="" />
-          </div>
-          <div class="modal-nutrition">
-            <button class="btn btn-outline btn-nutrition" id="nutritionToggle">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/>
-                <line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/>
-              </svg>
-              Información Nutricional
-            </button>
-            <div class="nutrition-image-wrap" id="nutritionWrap">
-              <img id="nutritionImg" src="" alt="Tabla Nutricional" />
+          <div class="modal-image-container" id="modalImageBg">
+            <div class="modal-image">
+              <span class="modal-badge" id="modalBadge" style="display:none"></span>
+              <span class="modal-stock-tag" id="modalStockTag"></span>
+              <img id="modalImg" src="" alt="" />
             </div>
           </div>
         </div>
 
-        <!-- Right: info -->
+        <!-- Right: info + tabs -->
         <div class="modal-info-col">
-          <span class="modal-badge" id="modalBadge"></span>
-          <h2 class="modal-product-name" id="modalName"></h2>
-          <p class="modal-brand" id="modalBrand"></p>
-          <p class="modal-price" id="modalPrice"></p>
-          <p class="modal-description" id="modalDescription"></p>
+
+          <div class="modal-info-head">
+            <h2 class="modal-product-name" id="modalName"></h2>
+            <p class="modal-brand" id="modalBrand"></p>
+            <p class="modal-price" id="modalPrice"></p>
+          </div>
 
           <table class="modal-chars-table" id="modalCharsTable" aria-label="Características del producto"></table>
 
+          <!-- Tab navigation -->
+          <div class="modal-tabs-wrap">
+            <div class="modal-tabs" role="tablist" aria-label="Información del producto">
+              <button class="modal-tab is-active" id="mtab-btn-desc" role="tab"
+                      aria-selected="true" aria-controls="mtab-desc" data-mtab="desc">
+                Descripción
+              </button>
+              <button class="modal-tab" id="mtab-btn-use" role="tab"
+                      aria-selected="false" aria-controls="mtab-use" data-mtab="use" hidden>
+                Cómo Usarlo
+              </button>
+              <button class="modal-tab" id="mtab-btn-goal" role="tab"
+                      aria-selected="false" aria-controls="mtab-goal" data-mtab="goal" hidden>
+                Beneficios
+              </button>
+              <button class="modal-tab" id="mtab-btn-nutr" role="tab"
+                      aria-selected="false" aria-controls="mtab-nutr" data-mtab="nutr" hidden>
+                Nutricional
+              </button>
+              <span class="modal-tab-indicator" id="modalTabIndicator" aria-hidden="true"></span>
+            </div>
+
+            <div class="modal-tab-panels">
+              <div class="modal-tab-panel is-active" id="mtab-desc"
+                   role="tabpanel" aria-labelledby="mtab-btn-desc">
+                <p id="modalDescription"></p>
+              </div>
+              <div class="modal-tab-panel" id="mtab-use"
+                   role="tabpanel" aria-labelledby="mtab-btn-use">
+                <p id="modalHowToUse"></p>
+              </div>
+              <div class="modal-tab-panel" id="mtab-goal"
+                   role="tabpanel" aria-labelledby="mtab-btn-goal">
+                <p id="modalGoalDesc"></p>
+              </div>
+              <div class="modal-tab-panel" id="mtab-nutr"
+                   role="tabpanel" aria-labelledby="mtab-btn-nutr">
+                <img id="modalNutritionImg" src="" alt="" class="modal-nutrition-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
           <div class="modal-links">
-            <a href="#" id="modalWA" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <a href="#" id="modalWA" target="_blank" rel="noopener noreferrer"
+               class="btn btn-whatsapp btn-modal-primary">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
               </svg>
-              WhatsApp
+              Consultar por este producto
             </a>
-            <a href="#" id="modalProductPage" class="btn btn-product-page" aria-label="Ver página completa del producto">
+            <a href="#" id="modalProductPage"
+               class="btn btn-outline btn-modal-secondary"
+               aria-label="Ver página completa del producto">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                 <polyline points="14 2 14 8 20 8"/>
@@ -517,10 +675,17 @@
               Ver Producto
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+          <!-- Related products -->
+          <div class="modal-related" id="modalRelated" style="display:none">
+            <h3 class="modal-related-title">También te puede interesar</h3>
+            <div class="modal-related-list" id="modalRelatedList"></div>
+          </div>
+
+        </div><!-- end modal-info-col -->
+      </div><!-- end modal-body -->
+    </div><!-- end modal -->
+  </div><!-- end modalOverlay -->
 
   <!-- ══════════════════════════════════════════════════════
        FLOATING WHATSAPP BUTTON
@@ -530,9 +695,29 @@
     <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
+    <span class="floating-wa-text">Consultá por WhatsApp</span>
   </a>
 
-  <script src="products-data.js"></script>
+  <!-- ══════════════════════════════════════════════════════
+       STICKY MOBILE CTA (shown only when modal is open)
+  ══════════════════════════════════════════════════════════ -->
+  <div class="sticky-cta" id="stickyCTA" aria-hidden="true" aria-live="polite">
+    <div class="sticky-cta-info">
+      <span class="sticky-cta-label">Precio</span>
+      <span class="sticky-cta-price" id="stickyCTAPrice"></span>
+    </div>
+    <a href="#" class="btn btn-whatsapp sticky-cta-btn" id="stickyCTABtn"
+       target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Consultar
+    </a>
+  </div>
+
+  <!-- Toast notifications -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="false"></div>
+
   <script src="script.js"></script>
 </body>
 </html>

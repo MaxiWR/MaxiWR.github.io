@@ -26,7 +26,7 @@ Reemplazá `USERNAME` con tu usuario de GitHub y `NOMBRE-DEL-REPOSITORIO` con el
 
 Una vez que conocés la URL de producción, reemplazá `[FINAL_SITE_URL]` en:
 
-- `data/site-config.json` → campo `siteUrl`
+- `site-config.json` → campo `siteUrl`
 - `index.html` → canonical, OG tags, structured data (buscar `[FINAL_SITE_URL]`)
 - `robots.txt` → línea Sitemap
 
@@ -35,7 +35,7 @@ Luego regenerá las páginas de producto:
 node scripts/generate-product-pages.mjs
 ```
 
-Esto actualizará automáticamente `productos/*.html` y `sitemap.xml` con las URLs correctas.
+Esto actualizará automáticamente las páginas de producto generadas en el root y `sitemap.xml` con las URLs correctas.
 
 ---
 
@@ -44,7 +44,7 @@ Esto actualizará automáticamente `productos/*.html` y `sitemap.xml` con las UR
 La imagen de Open Graph no existe todavía. Creá una imagen de **1200 × 630 px** en formato WebP:
 
 ```
-images/banco-suplementos-og.webp
+banco-suplementos-og.webp
 ```
 
 Requisitos:
@@ -65,10 +65,10 @@ magick imagen.png -quality 82 banco-suplementos-og.webp
 
 Hacé push del repositorio a GitHub Pages con todos los cambios:
 - `index.html` actualizado
-- `productos/*.html` generados
+- Páginas de producto generadas en el root (ej. `creatina-star-300g.html`)
 - `sitemap.xml` actualizado
 - `robots.txt`
-- Imágenes renombradas
+- Imágenes
 
 ---
 
@@ -126,9 +126,9 @@ Con la herramienta **Inspección de URL** en Search Console:
    ```
 2. Inspeccioná 2–3 páginas de producto, por ejemplo:
    ```
-   [FINAL_SITE_URL]/productos/creatina-star-300g.html
-   [FINAL_SITE_URL]/productos/whey-gentech-500g-chocolate.html
-   [FINAL_SITE_URL]/productos/barrita-pont.html
+   [FINAL_SITE_URL]/creatina-star-300g.html
+   [FINAL_SITE_URL]/whey-gentech-500g-chocolate.html
+   [FINAL_SITE_URL]/barrita-pont.html
    ```
 3. Para cada URL: hacé clic en **Solicitar indexación** solo si la URL está correcta y el contenido en vivo es el esperado.
 
@@ -140,11 +140,11 @@ Usá la herramienta oficial de Google:
 [Rich Results Test](https://search.google.com/test/rich-results)
 
 Probá estas páginas de producto (con precio numérico real):
-- `productos/creatina-star-300g.html`
-- `productos/whey-gentech-500g-chocolate.html`
-- `productos/shaker-ena-plus.html`
+- `creatina-star-300g.html`
+- `whey-gentech-500g-chocolate.html`
+- `shaker-ena-plus.html`
 
-La página `productos/combo-proteina-creatina-gentech.html` **no tiene** snippet de Producto porque el precio es "Consultar" — esto es correcto e intencional.
+La página `combo-proteina-creatina-gentech.html` **no tiene** snippet de Producto porque el precio es "Consultar" — esto es correcto e intencional.
 
 ---
 
@@ -162,4 +162,4 @@ En Search Console revisá periódicamente:
 
 - No afirmes que Search Console está configurado hasta completar la verificación real.
 - El dominio personalizado requiere configuración adicional en el DNS y en el repositorio (`CNAME` file en GitHub Pages).
-- Las páginas de producto con precio "Consultar" (actualmente solo `combo-proteina-creatina-gentech`) no califican para snippet de Producto. Actualizá `data/products.json` con un `priceNumeric` real y regenerá cuando el precio esté definido.
+- Las páginas de producto con precio "Consultar" (actualmente solo `combo-proteina-creatina-gentech`) no califican para snippet de Producto. Actualizá `products.json` con un `priceNumeric` real y regenerá cuando el precio esté definido.
