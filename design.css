@@ -646,20 +646,21 @@ body {
   border: 1px solid rgba(22,119,255,0.22);
   border-radius: 18px;
   position: relative;
-  overflow: visible;
+  /* overflow:visible was removed — it prevented modal from scrolling.
+     Glow effect is now achieved via box-shadow (not clipped by overflow). */
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
   max-width: min(1100px, 96vw);
+  box-shadow:
+    0 0 0 1px rgba(22, 119, 255, 0.45),
+    0 0 50px rgba(124, 58, 237, 0.14),
+    0 32px 80px rgba(0, 0, 0, 0.78);
 }
 
-/* Gradient border glow */
-.modal::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: 19px;
-  background: linear-gradient(135deg, rgba(22,119,255,0.50), rgba(124,58,237,0.30), rgba(22,119,255,0.10), transparent);
-  z-index: -1;
-  pointer-events: none;
-}
+/* ::before replaced by box-shadow above (box-shadow is not clipped by overflow) */
+.modal::before { display: none; }
 
 .modal-image-container {
   background: linear-gradient(160deg, #050d1c 0%, #0d2040 60%, rgba(22,119,255,0.18) 100%);
@@ -981,7 +982,11 @@ body.light-mode .testimonials-cta-title { color: #0b1724; }
   .hero-title { -webkit-text-fill-color: transparent; }
   .hero-buttons .btn-primary,
   .hero-buttons .btn-secondary { padding: 13px 22px; font-size: 13px; }
-  .modal { border-radius: 16px 16px 0 0; }
+  /* Bottom-sheet border radius (overrides base, matches styles.css section 33) */
+  .modal { border-radius: 22px 22px 0 0; }
+
+  /* Light mode sticky modal links */
+  body.light-mode .modal-links { background: #f5f8ff; }
 }
 
 /* ══════════════════════════════════════════════════════════════

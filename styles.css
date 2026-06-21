@@ -50,6 +50,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 16px);
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -62,9 +63,22 @@ body {
   overflow-x: hidden;
 }
 
-body.modal-open,
+/* Mobile menu still uses simple overflow lock */
 body.menu-open {
   overflow: hidden;
+}
+
+/* Modal scroll lock is handled via JS (position:fixed + top offset).
+   Compensate scrollbar disappearance on fixed elements. */
+body.modal-open .header {
+  padding-right: var(--scrollbar-compensation, 0px);
+}
+body.modal-open .floating-wa {
+  /* right-offset already viewport-anchored; compensate inner spacing */
+  right: calc(28px + var(--scrollbar-compensation, 0px));
+}
+body.modal-open .toast-container {
+  right: calc(24px + var(--scrollbar-compensation, 0px));
 }
 
 a {
@@ -422,6 +436,7 @@ h1, h2, h3, h4 {
   background: #0A1520;
   border-bottom: 1px solid var(--border);
   max-height: calc(100vh - var(--header-h));
+  max-height: calc(100dvh - var(--header-h));
   overflow-y: auto;
   transform: translateY(-105%);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1609,6 +1624,7 @@ h1, h2, h3, h4 {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.28s ease;
+  touch-action: none;
 }
 
 .modal-overlay.modal--active {
@@ -1624,7 +1640,12 @@ h1, h2, h3, h4 {
   max-width: 940px;
   width: 100%;
   max-height: 92vh;
+  max-height: 92dvh;
   overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   box-shadow: 0 32px 80px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(45, 143, 232, 0.1);
   transform: scale(0.96) translateY(10px);
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1693,7 +1714,8 @@ h1, h2, h3, h4 {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   transition: transform 0.4s ease;
   cursor: zoom-in;
 }
@@ -2696,17 +2718,27 @@ body.light-mode .product-card::after {
   white-space: nowrap;
 }
 
-/* ── 33. MOBILE UX IMPROVEMENTS ──────────────────────────── */
-@media (max-width: 768px) {
-  /* Hero: no ocupar toda la pantalla en mobile */
-  .hero { min-height: 75vh; }
-  .hero-inner { padding: 40px 20px; }
+/* ── 33. MOBILE UX — Comprehensive responsive fixes ──────── */
 
-  /* Botones del hero apilados y full-width */
-  .hero-buttons { flex-direction: column; align-items: stretch; }
+/* ── 33a. TABLET / MEDIUM (≤ 900px) ──────────────────────── */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  }
+}
+
+/* ── 33b. MOBILE CORE (≤ 768px) ──────────────────────────── */
+@media (max-width: 768px) {
+  /* Background: fixed-attachment causes iOS scroll jank */
+  body { background-attachment: scroll; }
+
+  /* ── Hero ── */
+  .hero { min-height: auto; }
+  .hero-inner { padding: 40px 20px 48px; gap: 32px; }
+  .hero-buttons { display: grid; grid-template-columns: 1fr; gap: 10px; }
   .hero-buttons .btn { justify-content: center; }
 
-  /* Secciones: padding vertical reducido */
+  /* ── Sections ── */
   .product-section { padding: 48px 0 24px; }
   .featured-section { padding: 40px 0 24px; }
   .section-header { margin-bottom: 28px; }
@@ -2714,34 +2746,142 @@ body.light-mode .product-card::after {
   .contact-section { padding: 64px 20px; }
   .footer { padding-top: 48px; }
 
-  /* Touch targets más grandes */
-  .pill { padding: 9px 18px; font-size: 13px; }
-  .search-input { padding: 11px 12px 11px 38px; font-size: 15px; height: 44px; }
+  /* ── Filter bar ── */
+  .filters-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 16px;
+  }
+  .search-input { width: 100%; height: 44px; padding: 11px 12px 11px 38px; font-size: 15px; }
+  .brand-select { width: 100%; margin-left: 0; }
+  .filter-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .filter-pills::-webkit-scrollbar { display: none; }
+  .pill {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 9px 18px;
+    font-size: 13px;
+    min-height: 40px;
+  }
 
-  /* "Ver Detalles" siempre visible en touch: en mobile no hay hover */
-  .card-btn-details { opacity: 1; transform: translateY(0); }
-
-  /* Card actions en columna desde 768px */
-  .card-actions { flex-direction: column; }
-  .card-actions .btn-sm { min-width: unset; width: 100%; justify-content: center; }
-
-  /* Catalog padding lateral */
+  /* ── Product grid ── */
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+    gap: 16px;
+  }
   .catalog { padding-left: 16px; padding-right: 16px; }
+
+  /* ── Product cards ── */
+  .card-btn-details { opacity: 1; transform: translateY(0); }
+  .card-actions { flex-direction: column; }
+  .card-actions .btn-sm { min-width: unset; width: 100%; justify-content: center; min-height: 44px; }
+
+  /* ── MODAL — bottom sheet on mobile ── */
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal {
+    width: 100%;
+    max-width: none;
+    max-height: 96vh;
+    max-height: 96dvh;
+    border-radius: 22px 22px 0 0;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    /* animation: slides up from bottom */
+    transform: translateY(40px);
+  }
+
+  .modal-overlay.modal--active .modal {
+    transform: translateY(0);
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .modal-image-col {
+    width: 100%;
+    padding: 16px 16px 0;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .modal-image {
+    min-height: 0;
+    aspect-ratio: 1 / 0.78;
+    max-height: 42dvh;
+  }
+
+  .modal-image-container {
+    min-height: 0;
+  }
+
+  .modal-info-col {
+    width: 100%;
+    padding: 18px 16px calc(80px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .modal-links {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    background: #0D1E30;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--border);
+    margin: 0 -16px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .modal-links .btn { min-width: unset; width: 100%; justify-content: center; min-height: 46px; }
+
+  .modal-close {
+    position: sticky;
+    top: 12px;
+    z-index: 20;
+    margin-left: auto;
+    display: block;
+  }
+
+  /* Floating WA: move above sticky CTA on mobile */
+  .floating-wa { bottom: 88px; }
 }
 
+/* ── 33c. SMALL MOBILE (≤ 560px) ─────────────────────────── */
+@media (max-width: 560px) {
+  .product-grid { grid-template-columns: 1fr; }
+}
+
+/* ── 33d. EXTRA SMALL (≤ 480px) ──────────────────────────── */
 @media (max-width: 480px) {
-  /* Padding horizontal más ajustado en teléfonos pequeños */
-  .hero-inner { padding: 32px 16px; }
-  .filters-inner { padding: 0 16px; }
+  .hero-inner { padding: 32px 16px 48px; }
+  .hero-title { font-size: clamp(42px, 13vw, 64px); }
+  .filters-inner { padding: 0 12px; }
   .catalog { padding: 0 12px 80px; }
   .testimonials-section { padding: 48px 16px; }
   .contact-section { padding: 48px 16px; }
-
-  /* Imagen de card levemente más chica */
   .card-image { height: 195px; }
-
-  /* Reducir padding de sección en pantallas muy chicas */
   .product-section { padding: 40px 0 20px; }
+  .floating-wa { bottom: 88px; right: 16px; width: 48px; height: 48px; }
+
+  /* Modal at tiny screens: full-height sheet */
+  .modal {
+    max-height: 100vh;
+    max-height: 100dvh;
+    border-radius: 18px 18px 0 0;
+  }
 }
 
 /* ── 34. REDUCED MOTION ───────────────────────────────────── */

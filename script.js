@@ -14,6 +14,55 @@ let searchQuery   = "";
 let lastOpenedCardEl = null; // for focus return after modal close
 
 // ============================================================
+// SCROLL LOCK — prevents page shift when modal opens
+// ============================================================
+let lockedScrollY    = 0;
+let scrollLockActive = false;
+
+function lockPageScroll() {
+  if (scrollLockActive) return;
+  scrollLockActive = true;
+  lockedScrollY    = window.scrollY;
+
+  const scrollbarWidth = Math.max(
+    0,
+    window.innerWidth - document.documentElement.clientWidth
+  );
+
+  document.documentElement.style.setProperty(
+    '--scrollbar-compensation',
+    `${scrollbarWidth}px`
+  );
+
+  document.body.style.position    = 'fixed';
+  document.body.style.top         = `-${lockedScrollY}px`;
+  document.body.style.left        = '0';
+  document.body.style.right       = '0';
+  document.body.style.width       = '100%';
+  if (scrollbarWidth > 0) {
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+  }
+  document.body.classList.add('modal-open');
+}
+
+function unlockPageScroll() {
+  if (!scrollLockActive) return;
+  scrollLockActive = false;
+
+  document.body.classList.remove('modal-open');
+  document.body.style.position    = '';
+  document.body.style.top         = '';
+  document.body.style.left        = '';
+  document.body.style.right       = '';
+  document.body.style.width       = '';
+  document.body.style.paddingRight = '';
+
+  document.documentElement.style.removeProperty('--scrollbar-compensation');
+
+  window.scrollTo(0, lockedScrollY);
+}
+
+// ============================================================
 // PRODUCT LOADER
 // ============================================================
 async function loadProducts() {
@@ -537,7 +586,7 @@ function openModal(id, triggerEl) {
   const overlay = document.getElementById("modalOverlay");
   const modal   = document.getElementById("modal");
   overlay.classList.add("modal--active");
-  document.body.classList.add("modal-open");
+  lockPageScroll();
 
   // Stagger animation
   modal.classList.remove("modal--opening");
@@ -564,7 +613,6 @@ function closeModal() {
   const modal   = document.getElementById("modal");
   overlay.classList.remove("modal--active");
   modal.classList.remove("modal--opening");
-  document.body.classList.remove("modal-open");
 
   // Remove focus trap
   if (modal._trapHandler) {
@@ -572,14 +620,32 @@ function closeModal() {
     modal._trapHandler = null;
   }
 
-  // Return focus
-  if (lastOpenedCardEl && typeof lastOpenedCardEl.focus === "function") {
-    setTimeout(() => lastOpenedCardEl.focus(), 50);
-  }
+  // Return focus to the card that opened the modal
+  const triggerEl = lastOpenedCardEl;
   lastOpenedCardEl = null;
 
   // Hide sticky CTA
   hideStickyMobileCTA();
+
+  // Unlock scroll AFTER the overlay fade-out animation (280ms transition + buffer)
+  // We use transitionend as primary signal and setTimeout as fallback
+  let unlocked = false;
+  const doUnlock = () => {
+    if (unlocked) return;
+    unlocked = true;
+    unlockPageScroll();
+    if (triggerEl && typeof triggerEl.focus === "function") {
+      triggerEl.focus({ preventScroll: true });
+    }
+  };
+
+  const onTransitionEnd = (e) => {
+    if (e.propertyName !== 'opacity') return;
+    overlay.removeEventListener('transitionend', onTransitionEnd);
+    doUnlock();
+  };
+  overlay.addEventListener('transitionend', onTransitionEnd);
+  setTimeout(doUnlock, 350); // fallback if transitionend doesn't fire
 }
 
 // ============================================================
