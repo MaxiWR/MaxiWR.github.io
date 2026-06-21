@@ -976,7 +976,7 @@ function showPreviousHeroProduct() {
 function startHeroCarouselAutoplay() {
   stopHeroCarouselAutoplay();
   if (heroPrefersReduced.matches || heroCarouselProducts.length < 2) return;
-  heroCarouselTimer = window.setInterval(showNextHeroProduct, 5500);
+  heroCarouselTimer = window.setInterval(showNextHeroProduct, 3000);
 }
 
 function stopHeroCarouselAutoplay() {
