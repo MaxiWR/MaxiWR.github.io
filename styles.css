@@ -2696,7 +2696,55 @@ body.light-mode .product-card::after {
   white-space: nowrap;
 }
 
-/* ── 33. REDUCED MOTION ───────────────────────────────────── */
+/* ── 33. MOBILE UX IMPROVEMENTS ──────────────────────────── */
+@media (max-width: 768px) {
+  /* Hero: no ocupar toda la pantalla en mobile */
+  .hero { min-height: 75vh; }
+  .hero-inner { padding: 40px 20px; }
+
+  /* Botones del hero apilados y full-width */
+  .hero-buttons { flex-direction: column; align-items: stretch; }
+  .hero-buttons .btn { justify-content: center; }
+
+  /* Secciones: padding vertical reducido */
+  .product-section { padding: 48px 0 24px; }
+  .featured-section { padding: 40px 0 24px; }
+  .section-header { margin-bottom: 28px; }
+  .testimonials-section { padding: 56px 20px; }
+  .contact-section { padding: 64px 20px; }
+  .footer { padding-top: 48px; }
+
+  /* Touch targets más grandes */
+  .pill { padding: 9px 18px; font-size: 13px; }
+  .search-input { padding: 11px 12px 11px 38px; font-size: 15px; height: 44px; }
+
+  /* "Ver Detalles" siempre visible en touch: en mobile no hay hover */
+  .card-btn-details { opacity: 1; transform: translateY(0); }
+
+  /* Card actions en columna desde 768px */
+  .card-actions { flex-direction: column; }
+  .card-actions .btn-sm { min-width: unset; width: 100%; justify-content: center; }
+
+  /* Catalog padding lateral */
+  .catalog { padding-left: 16px; padding-right: 16px; }
+}
+
+@media (max-width: 480px) {
+  /* Padding horizontal más ajustado en teléfonos pequeños */
+  .hero-inner { padding: 32px 16px; }
+  .filters-inner { padding: 0 16px; }
+  .catalog { padding: 0 12px 80px; }
+  .testimonials-section { padding: 48px 16px; }
+  .contact-section { padding: 48px 16px; }
+
+  /* Imagen de card levemente más chica */
+  .card-image { height: 195px; }
+
+  /* Reducir padding de sección en pantallas muy chicas */
+  .product-section { padding: 40px 0 20px; }
+}
+
+/* ── 34. REDUCED MOTION ───────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
