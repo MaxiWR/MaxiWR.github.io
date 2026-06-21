@@ -791,42 +791,318 @@ function initFeaturedCarousel() {
 }
 
 // ============================================================
-// HERO — INJECT REAL PRODUCT IMAGES
+// HERO PRODUCT CAROUSEL
 // ============================================================
+
+// Category → card accent colors (matches design.css multi-color system)
+const HERO_CAROUSEL_ACCENTS = {
+  creatines:      { hex: '#1677ff', rgb: '22, 119, 255'  },
+  proteins:       { hex: '#a855f7', rgb: '168, 85, 247'  },
+  vitamins:       { hex: '#22d3ee', rgb: '34, 211, 238'  },
+  'protein-bars': { hex: '#f5b942', rgb: '245, 185, 66'  },
+  integra:        { hex: '#f5b942', rgb: '245, 185, 66'  },
+  crudda:         { hex: '#f5b942', rgb: '245, 185, 66'  },
+  pont:           { hex: '#f5b942', rgb: '245, 185, 66'  },
+  combos:         { hex: '#ec4899', rgb: '236, 72, 153'  },
+  accessories:    { hex: '#22c55e', rgb: '34, 197, 94'   },
+};
+
+function getHeroCarouselAccent(p) {
+  return (
+    HERO_CAROUSEL_ACCENTS[p.subcategory] ||
+    HERO_CAROUSEL_ACCENTS[p.category]    ||
+    HERO_CAROUSEL_ACCENTS.creatines
+  );
+}
+
+// Carousel state (module-level so helpers can share it)
+let heroCarouselProducts    = [];
+let heroCarouselActiveIndex = 0;
+let heroCarouselTimer       = null;
+let heroCarouselResumeTimer = null;
+const heroPrefersReduced    = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+function selectHeroCarouselProducts() {
+  // Use explicit heroCarousel flags when present in products.json
+  const flagged = products
+    .filter(p => p.active !== false && p.heroCarousel === true)
+    .sort((a, b) => (a.heroCarouselOrder || 99) - (b.heroCarouselOrder || 99));
+  if (flagged.length >= 3) return flagged.slice(0, 5);
+
+  // Fallback: one representative product per category
+  const picks = [];
+  const wantedSubcats = ['creatines', 'proteins', 'pont', 'vitamins', 'accessories'];
+  for (const subcat of wantedSubcats) {
+    const found = products.find(
+      p => p.active !== false &&
+           p.stock !== false &&
+           (p.subcategory === subcat || p.category === subcat) &&
+           !picks.includes(p)
+    );
+    if (found) picks.push(found);
+    if (picks.length >= 5) break;
+  }
+  return picks.length >= 3 ? picks : products.filter(p => p.active !== false).slice(0, 5);
+}
+
+function getCarouselPosition(index, activeIndex, total) {
+  if (index === activeIndex) return 'active';
+  if (index === (activeIndex - 1 + total) % total) return 'previous';
+  if (index === (activeIndex + 1) % total) return 'next';
+  return 'hidden';
+}
+
+function buildHeroCarouselCards() {
+  const stage  = document.getElementById('heroCarouselStage');
+  const dotsEl = document.getElementById('heroCarouselDots');
+  if (!stage || !dotsEl) return;
+
+  stage.innerHTML  = '';
+  dotsEl.innerHTML = '';
+
+  heroCarouselProducts.forEach((p, i) => {
+    const accent  = getHeroCarouselAccent(p);
+    const badge   = p.badge
+      ? `<span class="hero-product-card__badge">${p.badge}</span>`
+      : '';
+    const isEager = i < 3;
+
+    const article = document.createElement('article');
+    article.className = 'hero-product-card';
+    article.dataset.productId     = p.id;
+    article.dataset.carouselIndex = i;
+    article.style.setProperty('--hero-card-accent',     accent.hex);
+    article.style.setProperty('--hero-card-accent-rgb', accent.rgb);
+    article.tabIndex = 0;
+    article.setAttribute('aria-label', `${p.name} — ${p.price}`);
+
+    article.innerHTML = `
+      <div class="hero-product-card__image">
+        <img
+          src="${p.image}"
+          alt="${p.name}"
+          loading="${isEager ? 'eager' : 'lazy'}"
+          onerror="this.style.display='none'"
+        />
+        ${badge}
+      </div>
+      <div class="hero-product-card__content">
+        <span class="hero-product-card__brand">${p.brand}</span>
+        <h3 class="hero-product-card__name">${p.name}</h3>
+        <div class="hero-product-card__bottom">
+          <span class="hero-product-card__price">${p.price}</span>
+          <span class="hero-product-card__open" aria-hidden="true">Ver producto</span>
+        </div>
+      </div>
+    `;
+
+    // Click: side card → activate; active card → open modal
+    article.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const pos = getCarouselPosition(i, heroCarouselActiveIndex, heroCarouselProducts.length);
+      if (pos === 'active') {
+        openModal(p.id, article);
+      } else {
+        heroCarouselActiveIndex = i;
+        renderHeroCarouselState();
+        pauseHeroCarouselTemporarily();
+      }
+    });
+
+    article.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        article.click();
+      }
+    });
+
+    stage.appendChild(article);
+
+    // Pagination dot
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'hero-carousel-dot';
+    dot.dataset.dotIndex = i;
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', `Producto ${i + 1}: ${p.name}`);
+    dot.addEventListener('click', () => {
+      heroCarouselActiveIndex = i;
+      renderHeroCarouselState();
+      pauseHeroCarouselTemporarily();
+    });
+    dotsEl.appendChild(dot);
+  });
+}
+
+function renderHeroCarouselState() {
+  const total = heroCarouselProducts.length;
+  const cards = document.querySelectorAll('.hero-product-card');
+  const dots  = document.querySelectorAll('.hero-carousel-dot');
+
+  cards.forEach((card, i) => {
+    const pos = getCarouselPosition(i, heroCarouselActiveIndex, total);
+    card.classList.remove('is-active', 'is-previous', 'is-next', 'is-hidden');
+    card.classList.add(`is-${pos}`);
+    const visible = pos !== 'hidden';
+    card.tabIndex = visible ? 0 : -1;
+    card.setAttribute('aria-hidden',  visible ? 'false' : 'true');
+    card.setAttribute('aria-current', pos === 'active' ? 'true' : 'false');
+  });
+
+  const activeProduct = heroCarouselProducts[heroCarouselActiveIndex];
+  const accent = getHeroCarouselAccent(activeProduct);
+  const dotsEl = document.getElementById('heroCarouselDots');
+  if (dotsEl) dotsEl.style.setProperty('--hero-active-dot-color', accent.hex);
+
+  dots.forEach((dot, i) => {
+    const isActive = i === heroCarouselActiveIndex;
+    dot.classList.toggle('is-active', isActive);
+    dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    dot.setAttribute('aria-current',  isActive ? 'true' : 'false');
+  });
+}
+
+function showNextHeroProduct() {
+  heroCarouselActiveIndex = (heroCarouselActiveIndex + 1) % heroCarouselProducts.length;
+  renderHeroCarouselState();
+}
+
+function showPreviousHeroProduct() {
+  heroCarouselActiveIndex =
+    (heroCarouselActiveIndex - 1 + heroCarouselProducts.length) % heroCarouselProducts.length;
+  renderHeroCarouselState();
+}
+
+function startHeroCarouselAutoplay() {
+  stopHeroCarouselAutoplay();
+  if (heroPrefersReduced.matches || heroCarouselProducts.length < 2) return;
+  heroCarouselTimer = window.setInterval(showNextHeroProduct, 5500);
+}
+
+function stopHeroCarouselAutoplay() {
+  if (heroCarouselTimer !== null) {
+    window.clearInterval(heroCarouselTimer);
+    heroCarouselTimer = null;
+  }
+}
+
+function pauseHeroCarouselTemporarily() {
+  stopHeroCarouselAutoplay();
+  if (heroCarouselResumeTimer !== null) {
+    window.clearTimeout(heroCarouselResumeTimer);
+    heroCarouselResumeTimer = null;
+  }
+  heroCarouselResumeTimer = window.setTimeout(() => {
+    heroCarouselResumeTimer = null;
+    startHeroCarouselAutoplay();
+  }, 8000);
+}
+
 function initHero() {
-  const targets = [
-    { cardClass: "hero-card--2", subcategory: "proteins" },
-    { cardClass: "hero-card--1", subcategory: "creatines" },
-    { cardClass: "hero-card--3", subcategory: "pont" }
-  ];
+  heroCarouselProducts = selectHeroCarouselProducts();
+  if (heroCarouselProducts.length < 1) return;
 
-  targets.forEach(({ cardClass, subcategory }) => {
-    const card = document.querySelector(`.${cardClass}`);
-    if (!card) return;
+  buildHeroCarouselCards();
+  renderHeroCarouselState();
 
-    const product = products.find(p => p.subcategory === subcategory && p.active !== false);
-    if (!product) return;
+  const carousel = document.getElementById('heroProductCarousel');
+  const stage    = document.getElementById('heroCarouselStage');
+  const prevBtn  = document.getElementById('heroCarouselPrev');
+  const nextBtn  = document.getElementById('heroCarouselNext');
+  if (!carousel || !stage) return;
 
-    const imgWrap = card.querySelector(".hero-card-img");
-    const bodyEl  = card.querySelector(".hero-card-body");
-    if (!imgWrap) return;
+  // Arrow controls
+  if (prevBtn) prevBtn.addEventListener('click', () => { showPreviousHeroProduct(); pauseHeroCarouselTemporarily(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { showNextHeroProduct();     pauseHeroCarouselTemporarily(); });
 
-    // Inject real image
-    const img = document.createElement("img");
-    img.src   = product.image;
-    img.alt   = product.name;
-    img.loading = "lazy";
-    img.onerror = () => img.remove();
-    imgWrap.appendChild(img);
+  // Keyboard navigation (only when focus is inside the carousel)
+  carousel.addEventListener('keydown', (e) => {
+    if (!carousel.contains(document.activeElement)) return;
+    const tag = document.activeElement ? document.activeElement.tagName : '';
+    if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
 
-    // Update card body with real data
-    if (bodyEl) {
-      bodyEl.innerHTML = `
-        <p class="hero-card-name">${product.name}</p>
-        <p class="hero-card-price">${product.price}</p>
-      `;
+    switch (e.key) {
+      case 'ArrowLeft':
+        e.preventDefault();
+        showPreviousHeroProduct();
+        pauseHeroCarouselTemporarily();
+        break;
+      case 'ArrowRight':
+        e.preventDefault();
+        showNextHeroProduct();
+        pauseHeroCarouselTemporarily();
+        break;
+      case 'Home':
+        e.preventDefault();
+        heroCarouselActiveIndex = 0;
+        renderHeroCarouselState();
+        pauseHeroCarouselTemporarily();
+        break;
+      case 'End':
+        e.preventDefault();
+        heroCarouselActiveIndex = heroCarouselProducts.length - 1;
+        renderHeroCarouselState();
+        pauseHeroCarouselTemporarily();
+        break;
     }
   });
+
+  // Pause autoplay on hover / focus
+  carousel.addEventListener('mouseenter', stopHeroCarouselAutoplay);
+  carousel.addEventListener('mouseleave', startHeroCarouselAutoplay);
+  carousel.addEventListener('focusin',    stopHeroCarouselAutoplay);
+  carousel.addEventListener('focusout', (e) => {
+    if (!carousel.contains(e.relatedTarget)) startHeroCarouselAutoplay();
+  });
+
+  // Touch swipe
+  let touchStartX  = 0;
+  let touchStartY  = 0;
+  let isHorizSwipe = false;
+
+  stage.addEventListener('touchstart', (e) => {
+    touchStartX  = e.touches[0].clientX;
+    touchStartY  = e.touches[0].clientY;
+    isHorizSwipe = false;
+    stopHeroCarouselAutoplay();
+  }, { passive: true });
+
+  stage.addEventListener('touchmove', (e) => {
+    if (!isHorizSwipe) {
+      const dx = Math.abs(e.touches[0].clientX - touchStartX);
+      const dy = Math.abs(e.touches[0].clientY - touchStartY);
+      isHorizSwipe = dx > dy && dx > 5;
+    }
+  }, { passive: true });
+
+  stage.addEventListener('touchend', (e) => {
+    if (isHorizSwipe) {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 44) {
+        if (dx < 0) showNextHeroProduct();
+        else         showPreviousHeroProduct();
+      }
+    }
+    pauseHeroCarouselTemporarily();
+  }, { passive: true });
+
+  // Pause when browser tab is hidden
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopHeroCarouselAutoplay();
+    else                  startHeroCarouselAutoplay();
+  });
+
+  // Pause when carousel scrolls off screen
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) startHeroCarouselAutoplay();
+      else                       stopHeroCarouselAutoplay();
+    }
+  }, { threshold: 0.15 });
+  io.observe(carousel);
+
+  // Start autoplay
+  startHeroCarouselAutoplay();
 }
 
 // ============================================================

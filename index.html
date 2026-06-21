@@ -232,33 +232,36 @@
           </a>
         </div>
       </div>
-      <div class="hero-decoration" aria-hidden="true">
-        <div class="hero-card hero-card--1">
-          <div class="hero-card-img"></div>
-          <div class="hero-card-body">
-            <div class="hero-card-tag"></div>
-            <div class="hero-card-line hero-card-line--lg"></div>
-            <div class="hero-card-line"></div>
-            <div class="hero-card-line hero-card-line--sm"></div>
-          </div>
-        </div>
-        <div class="hero-card hero-card--2">
-          <div class="hero-card-img"></div>
-          <div class="hero-card-body">
-            <div class="hero-card-tag"></div>
-            <div class="hero-card-line hero-card-line--lg"></div>
-            <div class="hero-card-line"></div>
-            <div class="hero-card-line hero-card-line--sm"></div>
-          </div>
-        </div>
-        <div class="hero-card hero-card--3">
-          <div class="hero-card-img"></div>
-          <div class="hero-card-body">
-            <div class="hero-card-tag"></div>
-            <div class="hero-card-line hero-card-line--lg"></div>
-            <div class="hero-card-line"></div>
-            <div class="hero-card-line hero-card-line--sm"></div>
-          </div>
+      <!-- Hero Product Carousel — populated by initHero() in script.js -->
+      <div class="hero-product-carousel" id="heroProductCarousel"
+           role="region" aria-label="Productos destacados">
+        <div class="hero-carousel-stage" id="heroCarouselStage"
+             aria-live="polite" aria-atomic="false"></div>
+        <div class="hero-carousel-controls">
+          <button type="button"
+                  class="hero-carousel-arrow hero-carousel-arrow--prev"
+                  id="heroCarouselPrev"
+                  aria-label="Ver producto anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <div class="hero-carousel-dots" id="heroCarouselDots"
+               role="tablist" aria-label="Seleccionar producto destacado"></div>
+          <button type="button"
+                  class="hero-carousel-arrow hero-carousel-arrow--next"
+                  id="heroCarouselNext"
+                  aria-label="Ver producto siguiente">
+            <svg width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
