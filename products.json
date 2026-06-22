@@ -696,5 +696,18 @@
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Shaker%20ENA%20Plus"
     }
+  },
+  {
+    "id": 25,
+    "slug": "citrato-de-magnesio-granger",
+    "name": "Citrato de Magnesio 144g",
+    "brand": "Granger",
+    "category": "supplements",
+    "subcategory": "vitamins",
+    "price": "$15.000",
+    "priceNumeric": 15000,
+    "image": "citrato-de-magnesio-granger.webp",
+    "stock": true,
+    "active": true
   }
 ]
