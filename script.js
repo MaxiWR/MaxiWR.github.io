@@ -216,6 +216,8 @@ function createCard(p) {
     : "";
   const stockLabel = p.stock ? "Disponible" : "Agotado";
   const stockClass = p.stock ? "stock--available" : "stock--out";
+  const char = p.characteristics ?? {};
+  const waHref = p.links?.whatsapp ?? "#";
 
   return `
     <div class="product-card" data-id="${p.id}" data-subcategory="${p.subcategory}" data-category="${p.category}" role="article" aria-label="${p.name}">
@@ -233,10 +235,10 @@ function createCard(p) {
           <h4 class="overlay-title">Info Rápida</h4>
           <table class="overlay-table">
             <tr><td>Marca</td><td>${p.brand}</td></tr>
-            <tr><td>Presentación</td><td>${p.characteristics.presentation}</td></tr>
-            <tr><td>Sabor</td><td>${p.characteristics.flavor}</td></tr>
-            <tr><td>Porciones</td><td>${p.characteristics.servings}</td></tr>
-            <tr><td>Objetivo</td><td>${p.characteristics.goal}</td></tr>
+            <tr><td>Presentación</td><td>${char.presentation ?? '-'}</td></tr>
+            <tr><td>Sabor</td><td>${char.flavor ?? '-'}</td></tr>
+            <tr><td>Porciones</td><td>${char.servings ?? '-'}</td></tr>
+            <tr><td>Objetivo</td><td>${char.goal ?? '-'}</td></tr>
             <tr><td>Stock</td><td><span class="${stockClass}">${stockLabel}</span></td></tr>
           </table>
         </div>
@@ -246,7 +248,7 @@ function createCard(p) {
         <h3 class="card-name">${p.name}</h3>
         <p class="card-price">${p.price}</p>
         <div class="card-actions">
-          <a href="${p.links.whatsapp}" target="_blank" rel="noopener noreferrer"
+          <a href="${waHref}" target="_blank" rel="noopener noreferrer"
              class="btn btn-whatsapp btn-sm" aria-label="Consultar ${p.name} por WhatsApp">
             ${WA_SVG}
             WhatsApp
@@ -564,7 +566,7 @@ function openModal(id, triggerEl) {
   activateModalTab("desc");
 
   // WA link
-  document.getElementById("modalWA").href = p.links.whatsapp;
+  document.getElementById("modalWA").href = p.links?.whatsapp ?? "#";
 
   // Product page link
   const modalProductPage = document.getElementById("modalProductPage");
@@ -1117,7 +1119,7 @@ function updateStickyCTA(product) {
   if (!cta || !priceEl || !btnEl) return;
 
   priceEl.textContent = product.price || "CONSULTAR PRECIO";
-  btnEl.href          = product.links.whatsapp;
+  btnEl.href          = product.links?.whatsapp ?? "#";
   btnEl.setAttribute("aria-label", `Consultar ${product.name} por WhatsApp`);
 
   cta.setAttribute("aria-hidden", "false");

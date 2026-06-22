@@ -708,6 +708,16 @@
     "priceNumeric": 15000,
     "image": "citrato-de-magnesio-granger.webp",
     "stock": true,
-    "active": true
+    "active": true,
+    "badge": "Agotado",
+    "description": "Citrato de Magnesio Granger 144g. Perfecto para el tussi",
+    "characteristics": {
+      "presentation": "144g en polvo",
+      "flavor": "Sin sabor",
+      "servings": "-",
+      "goal": "Descanso y Recuperación"
+    },
+    "howToUse": "no sé bien todavía como se usa",
+    "goalDescription": "para dormir como un dios papá."
   }
 ]
