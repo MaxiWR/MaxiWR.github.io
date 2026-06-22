@@ -2,12 +2,12 @@
   {
     "id": 15,
     "slug": "creatina-star-300g",
-    "name": "Creatina Monohidrato 300g",
+    "name": "Creatina Monohidrato 300g magali",
     "brand": "Star Nutrition",
     "category": "supplements",
     "subcategory": "creatines",
-    "price": "$676.767",
-    "priceNumeric": 676767,
+    "price": "$666",
+    "priceNumeric": 666,
     "image": "creatina-star-300g.webp",
     "imageSurface": "light",
     "imageScale": 1.14,
@@ -262,11 +262,14 @@
     "stock": true,
     "active": true,
     "badge": "Disponible",
+    "relatedSlugs": [
+      "barrita-pont"
+    ],
     "description": "Barrita Integra sabor maní. Alta en proteínas y baja en azúcar. Snack ideal entre comidas para mantener el aporte proteico sin romper la dieta.",
     "characteristics": {
       "presentation": "Cajita individual",
       "flavor": "Maní",
-      "servings": "1 barra",
+      "servings": "10 barras",
       "goal": "Aporte de Proteína y Saciedad"
     },
     "howToUse": "Consumí directamente del envase en cualquier momento del día. Ideal como snack entre comidas, antes o después del entrenamiento, o cuando no podés acceder a una comida completa. No requiere preparación ni refrigeración.",
