@@ -231,9 +231,10 @@ function buildPage(p) {
     ? `\n  <script type="application/ld+json">\n  ${JSON.stringify(jsonLd, null, 2)}\n  </script>`
     : '';
 
-  const descShort = p.description.length > 155
-    ? p.description.slice(0, 152) + '...'
-    : p.description;
+  const desc = p.description || '';
+  const descShort = desc.length > 155
+    ? desc.slice(0, 152) + '...'
+    : desc;
 
   const nutritionHtml = p.nutritionTable
     ? `<figure class="pp-nutrition-figure">
@@ -333,18 +334,18 @@ function buildPage(p) {
         ${badgeHtml}<p class="card-brand">${escapeHtml(p.brand)}</p>
         <h1>${escapeHtml(p.name)}</h1>
         <p class="pp-price">${escapeHtml(p.price)}</p>
-        <p class="pp-desc">${escapeHtml(p.description)}</p>
+        <p class="pp-desc">${escapeHtml(p.description || '')}</p>
 
         <table class="modal-chars-table" aria-label="Características del producto">
-          <tr><th>Presentación</th><td>${escapeHtml(p.characteristics.presentation)}</td></tr>
-          <tr><th>Sabor</th><td>${escapeHtml(p.characteristics.flavor)}</td></tr>
-          <tr><th>Porciones</th><td>${escapeHtml(p.characteristics.servings)}</td></tr>
-          <tr><th>Objetivo</th><td>${escapeHtml(p.characteristics.goal)}</td></tr>
+          <tr><th>Presentación</th><td>${escapeHtml((p.characteristics || {}).presentation || '')}</td></tr>
+          <tr><th>Sabor</th><td>${escapeHtml((p.characteristics || {}).flavor || '')}</td></tr>
+          <tr><th>Porciones</th><td>${escapeHtml((p.characteristics || {}).servings || '')}</td></tr>
+          <tr><th>Objetivo</th><td>${escapeHtml((p.characteristics || {}).goal || '')}</td></tr>
           <tr><th>Stock</th><td><span class="${stockClass}">${stockLabel}</span></td></tr>
         </table>
 
         <div class="pp-actions">
-          <a href="${p.links.whatsapp}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <a href="${(p.links || {}).whatsapp || '#'}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
             ${WA_SVG}
             Consultar por WhatsApp
           </a>
@@ -376,7 +377,7 @@ function buildPage(p) {
       <h2 class="contact-title">¿Querés consultar stock y precios?</h2>
       <p class="contact-text">Contactanos por WhatsApp o seguinos en Instagram para ver novedades, promos y combos.</p>
       <div class="contact-buttons">
-        <a href="${p.links.whatsapp}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+        <a href="${(p.links || {}).whatsapp || '#'}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
           ${WA_SVG} WhatsApp
         </a>
         <a href="${config.instagram}" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
@@ -428,7 +429,7 @@ function buildPage(p) {
       <span class="pp-sticky-label">Precio</span>
       <span class="pp-sticky-price">${escapeHtml(p.price)}</span>
     </div>
-    <a href="${p.links.whatsapp}" target="_blank" rel="noopener noreferrer"
+    <a href="${(p.links || {}).whatsapp || '#'}" target="_blank" rel="noopener noreferrer"
        class="btn btn-whatsapp pp-sticky-btn">
       ${WA_SVG} Consultar
     </a>
