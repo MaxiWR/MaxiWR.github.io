@@ -22,12 +22,12 @@ Reemplazá `USERNAME` con tu usuario de GitHub y `NOMBRE-DEL-REPOSITORIO` con el
 
 ---
 
-## Paso 2 — Actualizar `[FINAL_SITE_URL]` en todos los archivos
+## Paso 2 — Actualizar `https://bancodesuplementos.com.ar` en todos los archivos
 
-Una vez que conocés la URL de producción, reemplazá `[FINAL_SITE_URL]` en:
+Una vez que conocés la URL de producción, reemplazá `https://bancodesuplementos.com.ar` en:
 
 - `site-config.json` → campo `siteUrl`
-- `index.html` → canonical, OG tags, structured data (buscar `[FINAL_SITE_URL]`)
+- `index.html` → canonical, OG tags, structured data (buscar `https://bancodesuplementos.com.ar`)
 - `robots.txt` → línea Sitemap
 
 Luego regenerá las páginas de producto:
@@ -109,7 +109,7 @@ Hacé push del repositorio a GitHub Pages con todos los cambios:
 1. En Search Console, en el panel izquierdo: **Índice → Sitemaps**.
 2. Ingresá la URL completa:
    ```
-   [FINAL_SITE_URL]/sitemap.xml
+   https://bancodesuplementos.com.ar/sitemap.xml
    ```
 3. Hacé clic en **Enviar**.
 4. Verificá que el estado sea "Éxito" y que el número de URLs descubiertas sea 25.
@@ -122,13 +122,13 @@ Con la herramienta **Inspección de URL** en Search Console:
 
 1. Inspeccioná la homepage:
    ```
-   [FINAL_SITE_URL]/
+   https://bancodesuplementos.com.ar/
    ```
 2. Inspeccioná 2–3 páginas de producto, por ejemplo:
    ```
-   [FINAL_SITE_URL]/creatina-star-300g.html
-   [FINAL_SITE_URL]/whey-gentech-500g-chocolate.html
-   [FINAL_SITE_URL]/barrita-pont.html
+   https://bancodesuplementos.com.ar/creatina-star-300g.html
+   https://bancodesuplementos.com.ar/whey-gentech-500g-chocolate.html
+   https://bancodesuplementos.com.ar/barrita-pont.html
    ```
 3. Para cada URL: hacé clic en **Solicitar indexación** solo si la URL está correcta y el contenido en vivo es el esperado.
 
