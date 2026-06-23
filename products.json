@@ -2,12 +2,12 @@
   {
     "id": 15,
     "slug": "creatina-star-300g",
-    "name": "Creatina Monohidrato 300g magali",
+    "name": "Creatina Monohidrato 300g",
     "brand": "Star Nutrition",
     "category": "supplements",
     "subcategory": "creatines",
-    "price": "$666",
-    "priceNumeric": 666,
+    "price": "$30.000",
+    "priceNumeric": 30000,
     "image": "creatina-star-300g.webp",
     "imageSurface": "light",
     "imageScale": 1.14,
@@ -77,9 +77,9 @@
     "price": "$25.500",
     "priceNumeric": 25500,
     "image": "creatina-gentech-250g.webp",
-    "stock": true,
+    "stock": false,
     "active": true,
-    "badge": "Disponible",
+    "badge": "Agotado",
     "relatedSlugs": [
       "whey-gentech-500g-chocolate",
       "combo-proteina-creatina-gentech"
@@ -318,7 +318,7 @@
     "image": "barrita-crudda-coco.webp",
     "stock": false,
     "active": true,
-    "badge": "Disponible",
+    "badge": "Agotado",
     "description": "Barrita Crudda sabor coco. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
     "characteristics": {
       "presentation": "Caja de 10U",
@@ -532,7 +532,7 @@
     "id": 20,
     "slug": "combo-mixto-3cajas-crudda-integra",
     "name": "Combo Mixto 3X Cajas Crudda / Integra",
-    "brand": "Pont",
+    "brand": "El Banco",
     "category": "combos",
     "subcategory": "combos",
     "price": "$56.000",
@@ -566,7 +566,10 @@
     "image": "combo-mixto-5cajas-crudda-integra.png",
     "stock": true,
     "active": true,
+    "heroCarousel": true,
+    "heroCarouselOrder": 5,
     "badge": "Combo",
+    "featured": true,
     "description": "Mix de 5X Cajas de barritas proteicas de diferentes marcas y sabores. Probá Integra y Crudda en un solo combo. Ideal para variedad y descubrir tu favorita.",
     "characteristics": {
       "presentation": "5X Cajas X10 unidades",
@@ -676,8 +679,6 @@
     "imageSurface": "light",
     "stock": true,
     "active": true,
-    "heroCarousel": true,
-    "heroCarouselOrder": 5,
     "badge": "Disponible",
     "relatedSlugs": [
       "whey-gentech-500g-chocolate",
@@ -704,22 +705,24 @@
     "brand": "Granger",
     "category": "supplements",
     "subcategory": "vitamins",
-    "price": "$15.000",
-    "priceNumeric": 15000,
+    "price": "$12.000",
+    "priceNumeric": 12000,
     "image": "citrato-de-magnesio-granger.webp",
-    "stock": true,
+    "stock": false,
     "active": true,
     "badge": "Agotado",
-    "featured": true,
-    "description": "Citrato de Magnesio Granger 144g. Perfecto para el tussi",
+    "description": "Citrato de Magnesio Granger, ideal para complementar la ingesta diaria de magnesio y apoyar la función muscular, nerviosa y energética.",
     "characteristics": {
       "presentation": "144g en polvo",
       "flavor": "Sin sabor",
-      "servings": "-",
+      "servings": "90",
       "goal": "Descanso y Recuperación"
     },
-    "howToUse": "no sé bien todavía como se usa",
-    "goalDescription": "para dormir como un dios papá.",
-    "nutritionTable": "citrato-magnesio-tabla.webp"
+    "howToUse": "Tomá la porción indicada en el envase, preferentemente junto con una comida y agua. No superes la dosis recomendada.",
+    "goalDescription": "Potenciá tu bienestar diario y acompañá cada entrenamiento con un mineral esencial para la función muscular, el sistema nervioso y la producción de energía.",
+    "nutritionTable": "citrato-magnesio-tabla.webp",
+    "links": {
+      "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%Citrato%de%Magnesio"
+    }
   }
 ]
