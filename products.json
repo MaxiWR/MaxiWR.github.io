@@ -675,7 +675,7 @@
     "image": "shaker-ena-plus.jpg",
     "imageSurface": "light",
     "stock": true,
-    "active": false,
+    "active": true,
     "heroCarousel": true,
     "heroCarouselOrder": 5,
     "badge": "Disponible",
@@ -710,6 +710,7 @@
     "stock": true,
     "active": true,
     "badge": "Agotado",
+    "featured": true,
     "description": "Citrato de Magnesio Granger 144g. Perfecto para el tussi",
     "characteristics": {
       "presentation": "144g en polvo",
@@ -718,6 +719,7 @@
       "goal": "Descanso y Recuperación"
     },
     "howToUse": "no sé bien todavía como se usa",
-    "goalDescription": "para dormir como un dios papá."
+    "goalDescription": "para dormir como un dios papá.",
+    "nutritionTable": "citrato-magnesio-tabla.webp"
   }
 ]
