@@ -10,26 +10,24 @@
     "priceNumeric": 30000,
     "image": "creatina-star-300g.webp",
     "imageSurface": "light",
-    "imageScale": 1.14,
-    "stock": true,
+    "stock": false,
     "active": true,
-    "heroCarousel": true,
-    "heroCarouselOrder": 1,
-    "badge": "Más Vendido",
-    "featured": true,
+    "badge": "Agotado",
     "relatedSlugs": [
-      "whey-gentech-500g-chocolate",
-      "combo-proteina-creatina-gentech"
+      "creatina-granger-300g",
+      "creatina-gentech-250g",
+      "combo-mixto-5cajas-crudda-integra",
+      "cafeina-ena"
     ],
-    "description": "Creatina monohidrato micronizada Star Nutrition 300g. Clínicamente probada para aumentar la fuerza, la potencia y la masa muscular magra. El suplemento más estudiado en nutrición deportiva.",
+    "description": "Formulada a base de creatina monohidratada, una de las formas de creatina con mayor respaldo científico en nutrición deportiva. Su función principal consiste en aumentar la disponibilidad intramuscular de fosfocreatina, molécula utilizada para regenerar ATP rápidamente durante esfuerzos breves, repetidos y de alta intensidad. Incorporada de forma constante junto con entrenamiento adecuado, puede acompañar mejoras en fuerza, potencia y capacidad de trabajo.",
     "characteristics": {
       "presentation": "300g en polvo",
       "flavor": "Sin sabor",
       "servings": "60",
       "goal": "Fuerza y Potencia"
     },
-    "howToUse": "Disolvé 1 porción (5g) en 200–300 ml de agua o jugo. Tomá una vez al día, preferentemente post-entrenamiento o con una comida. Etapa de carga opcional: 4 porciones diarias durante los primeros 5–7 días para saturar reservas más rápido.",
-    "goalDescription": "Aumentá la fuerza máxima, la potencia explosiva y la masa muscular magra. La creatina es el suplemento más estudiado de la nutrición deportiva, con evidencia sólida para musculación, CrossFit, sprint y actividades de alta intensidad.",
+    "howToUse": "Disolvé 1 porción (5g) en 200–300 ml de agua o jugo. Tomá una vez al día, preferentemente post-entrenamiento o con una comida, incluidos días de descanso. Etapa de carga opcional: 4 porciones diarias durante los primeros 5–7 días para saturar reservas más rápido. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
+    "goalDescription": "Potenciá tu fuerza, explosividad y rendimiento para entrenar cada vez más fuerte.",
     "nutritionTable": "creatina-star-300g-tabla.jpg",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Creatina%20Monohidrato%20300g%20Star%20Nutrition"
@@ -48,20 +46,25 @@
     "imageSurface": "light",
     "stock": true,
     "active": true,
+    "heroCarousel": true,
+    "heroCarouselOrder": 4,
     "badge": "Disponible",
+    "featured": true,
     "relatedSlugs": [
       "whey-gentech-500g-chocolate",
-      "shaker-ena-plus"
+      "combo-proteina-creatina-gentech",
+      "combo-shaker-proteina-gentech",
+      "barrita-crudda-brownie"
     ],
-    "description": "Creatina monohidrato Granger 300g. Fórmula pura para aumentar la fuerza, la potencia explosiva y la masa muscular magra en cada sesión de entrenamiento.",
+    "description": "Su componente activo es la creatina monohidratada, un compuesto nitrogenado que participa directamente en el sistema energético de la fosfocreatina. Al favorecer una resíntesis más rápida de ATP, resulta especialmente relevante en ejercicios explosivos como musculación, velocidad y esfuerzos intermitentes. Su presentación de 300 g ofrece una alternativa rendidora para sostener una suplementación diaria y consistente.",
     "characteristics": {
       "presentation": "300g en polvo",
       "flavor": "Sin sabor",
       "servings": "60",
       "goal": "Fuerza y Potencia"
     },
-    "howToUse": "Disolvé 1 porción (5g) en 200–300 ml de agua o jugo. Consumí una vez al día preferentemente post-entrenamiento o con una comida. Etapa de carga opcional: 4 porciones diarias los primeros 5–7 días.",
-    "goalDescription": "Mejorá la fuerza, la potencia explosiva y el rendimiento en ejercicios de alta intensidad. Ideal para quienes buscan aumentar la masa muscular y la capacidad de trabajo en cada sesión de entrenamiento.",
+    "howToUse": "Disolvé 1 porción (5g) en 200–300 ml de agua o jugo. Tomá una vez al día, preferentemente post-entrenamiento o con una comida, incluidos días de descanso. Etapa de carga opcional: 4 porciones diarias durante los primeros 5–7 días para saturar reservas más rápido. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
+    "goalDescription": "Potenciá tu fuerza, explosividad y rendimiento para entrenar cada vez más fuerte.",
     "nutritionTable": "creatina-granger-300g-tabla.jpg",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Creatina%20Monohidrato%20300g%20Granger"
@@ -74,25 +77,27 @@
     "brand": "Gentech",
     "category": "supplements",
     "subcategory": "creatines",
-    "price": "$25.500",
-    "priceNumeric": 25500,
+    "price": "$26.000",
+    "priceNumeric": 26000,
     "image": "creatina-gentech-250g.webp",
-    "stock": false,
+    "stock": true,
     "active": true,
-    "badge": "Agotado",
+    "badge": "Disponible",
     "relatedSlugs": [
       "whey-gentech-500g-chocolate",
-      "combo-proteina-creatina-gentech"
+      "combo-proteina-creatina-gentech",
+      "combo-shaker-proteina-gentech",
+      "combo-mixto-3cajas-crudda-integra"
     ],
-    "description": "Creatina monohidrato Gentech 250g. Alta pureza para maximizar el rendimiento, la fuerza y la recuperación muscular entre sesiones.",
+    "description": "Creatina monohidratada diseñada para complementar entrenamientos de fuerza, potencia y alta intensidad. Su mecanismo se basa en elevar las reservas musculares de fosfocreatina, permitiendo mantener mejor la producción energética durante series exigentes y recuperaciones breves. El formato de 250 g resulta práctico para quienes buscan incorporar uno de los suplementos ergogénicos más estudiados dentro de una planificación deportiva.",
     "characteristics": {
       "presentation": "250g en polvo",
       "flavor": "Sin sabor",
       "servings": "50",
       "goal": "Fuerza y Potencia"
     },
-    "howToUse": "Disolvé 1 porción (5g) en 200–300 ml de agua o jugo. Tomá una vez al día post-entrenamiento o con una comida. Etapa de carga opcional: 4 porciones diarias durante los primeros 5–7 días.",
-    "goalDescription": "Incrementá la fuerza y la potencia muscular en cada sesión. Acelera la recuperación entre series y permite acumular más volumen de entrenamiento. Compatible con musculación, deportes de equipo y cualquier actividad de alta demanda física.",
+    "howToUse": "Disolvé 1 porción (5g) en 200–300 ml de agua o jugo. Tomá una vez al día, preferentemente post-entrenamiento o con una comida, incluidos días de descanso. Etapa de carga opcional: 4 porciones diarias durante los primeros 5–7 días para saturar reservas más rápido. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
+    "goalDescription": "Potenciá tu fuerza, explosividad y rendimiento para entrenar cada vez más fuerte.",
     "nutritionTable": "creatina-gentech-250g-tabla.png",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Creatina%20Monohidrato%20250g%20Gentech"
@@ -111,22 +116,22 @@
     "stock": true,
     "active": true,
     "heroCarousel": true,
-    "heroCarouselOrder": 2,
+    "heroCarouselOrder": 3,
     "badge": "Disponible",
-    "featured": true,
     "relatedSlugs": [
-      "creatina-star-300g",
-      "shaker-ena-plus",
-      "combo-proteina-creatina-gentech"
+      "creatina-granger-300g",
+      "barrita-crudda-banana",
+      "combo-shaker-proteina-gentech",
+      "combo-mixto-5cajas-crudda-integra"
     ],
-    "description": "Proteína en polvo Gentech sabor chocolate, presentación de 500g. Ideal para el aporte proteico post-entrenamiento y la recuperación muscular.",
+    "description": "Su matriz principal está compuesta por proteínas del suero lácteo, caracterizadas por aportar aminoácidos esenciales y una proporción relevante de aminoácidos de cadena ramificada. Entre ellos destaca la leucina, involucrada en la señalización molecular que activa la síntesis de proteínas musculares. Con 25 g de proteína por porción según la tabla nutricional compartida, es una opción práctica para complementar el requerimiento proteico diario y acompañar la recuperación posterior al entrenamiento.",
     "characteristics": {
       "presentation": "500g en polvo",
       "flavor": "Chocolate",
       "servings": "~16",
       "goal": "Volumen y Recuperación"
     },
-    "howToUse": "Disolvé 1 porción (aprox. 30 g) en 200–300 ml de agua, leche o bebida vegetal. Consumí 1–2 porciones diarias: una preferentemente post-entrenamiento y otra cuando necesitás complementar tu ingesta proteica.",
+    "howToUse": "Disolvé 1 porción (aprox. 30 g) en 200–300 ml de agua, leche o bebida vegetal. Consumí 1–2 porciones diarias: una preferentemente post-entrenamiento y otra cuando necesitás complementar tu ingesta proteica. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
     "goalDescription": "Favorecé la recuperación y el crecimiento muscular luego de cada entrenamiento. Alcanzar el requerimiento proteico diario con una fuente de alta biodisponibilidad mejora la composición corporal y acelera la adaptación al ejercicio.",
     "nutritionTable": "whey-gentech-500g-chocolate-tabla.png",
     "links": {
@@ -136,7 +141,7 @@
   {
     "id": 2,
     "slug": "proteina-vegetal-gold-nutrition",
-    "name": "Proteína Vegetal",
+    "name": "Proteína Vegetal 2LB (903g)",
     "brand": "Gold Nutrition",
     "category": "supplements",
     "subcategory": "proteins",
@@ -148,16 +153,18 @@
     "badge": "Disponible",
     "relatedSlugs": [
       "shaker-ena-plus",
-      "combo-shaker-proteina-gold-nutrition"
+      "combo-shaker-proteina-gold-nutrition",
+      "barrita-pont",
+      "barrita-crudda-avellana"
     ],
-    "description": "Proteína de origen vegetal Gold Nutrition. Apta para veganos y personas con intolerancia a la lactosa. Excelente perfil de aminoácidos para la recuperación.",
+    "description": "Desarrollada a partir de una matriz proteica de origen vegetal, aporta aminoácidos necesarios para el mantenimiento y la reparación de tejidos. La calidad nutricional de una proteína vegetal depende de su perfil de aminoácidos, digestibilidad y cantidad total consumida, por lo que resulta especialmente útil dentro de una alimentación vegetal correctamente planificada. Es una alternativa práctica para personas veganas o para quienes prefieren evitar proteínas lácteas.",
     "characteristics": {
-      "presentation": "En polvo",
-      "flavor": "Natural",
-      "servings": "Variable",
+      "presentation": "2LB en polvo",
+      "flavor": "Sin sabor",
+      "servings": "30",
       "goal": "Volumen y Recuperación"
     },
-    "howToUse": "Disolvé 1 porción en 200–300 ml de agua, leche vegetal u otra bebida. Tomá 1–2 porciones diarias: una post-entrenamiento y otra cuando necesitás sumar proteína a tu dieta habitual.",
+    "howToUse": "Disolvé 1 porción (aprox. 30 g) en 200–300 ml de agua, leche o bebida vegetal. Consumí 1–2 porciones diarias: una preferentemente post-entrenamiento y otra cuando necesitás complementar tu ingesta proteica. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
     "goalDescription": "Recuperación muscular y desarrollo de masa magra con proteína 100% vegetal. Ideal para veganos, vegetarianos o intolerantes a la lactosa que buscan mejorar su rendimiento y composición corporal sin resignar calidad proteica.",
     "nutritionTable": "proteina-vegetal-gold-nutrition-tabla.webp",
     "links": {
@@ -176,17 +183,21 @@
     "image": "vitamina-c-natier.webp",
     "stock": true,
     "active": true,
-    "heroCarousel": true,
-    "heroCarouselOrder": 4,
     "badge": "Disponible",
-    "description": "Vitamina C Natier para reforzar el sistema inmune, mejorar la recuperación y actuar como antioxidante. Ideal como complemento diario.",
+    "relatedSlugs": [
+      "combo-crudda-pont",
+      "combo-mixto-5cajas-crudda-integra",
+      "whey-gentech-500g-chocolate",
+      "citrato-de-magnesio-granger"
+    ],
+    "description": "Su componente funcional es la vitamina C, un micronutriente hidrosoluble que participa como cofactor en la síntesis de colágeno, carnitina y determinados neurotransmisores. También interviene en la función inmunitaria, actúa como antioxidante fisiológico y mejora la absorción del hierro no hemínico presente en alimentos vegetales. Está pensada para complementar la alimentación cuando la ingesta dietaria de vitamina C resulta insuficiente.",
     "characteristics": {
-      "presentation": "Comprimidos",
+      "presentation": "50 comprimidos",
       "flavor": "Sin sabor",
       "servings": "Variable",
       "goal": "Sistema Inmune y Salud"
     },
-    "howToUse": "Tomá 1 comprimido por día junto con una comida. Se puede consumir a cualquier hora del día. No superes la dosis recomendada sin consulta previa a un profesional de la salud.",
+    "howToUse": "Tomá la porción indicada en el envase, preferentemente junto con una comida y agua no superar la dosis indicada. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
     "goalDescription": "Reforzá el sistema inmune, mejorá la recuperación muscular post-entrenamiento y reducí el estrés oxidativo generado por el ejercicio intenso. Como antioxidante, protege las células del daño causado por los radicales libres.",
     "nutritionTable": "vitamina-c-natier-tabla.webp",
     "links": {
@@ -206,14 +217,20 @@
     "stock": true,
     "active": true,
     "badge": "Disponible",
-    "description": "Cafeína en comprimidos ENA. Aumenta la energía, el enfoque y el rendimiento deportivo. Ideal como pre-entrenamiento. Sin azúcar, sin calorías.",
+    "relatedSlugs": [
+      "combo-proteina-creatina-gentech",
+      "creatina-granger-300g",
+      "whey-gentech-500g-chocolate",
+      "combo-shaker-proteina-gentech"
+    ],
+    "description": "Su ingrediente activo es la cafeína, un compuesto estimulante que actúa principalmente como antagonista de los receptores de adenosina en el sistema nervioso central. Este mecanismo puede aumentar el estado de alerta, mejorar la concentración y reducir la percepción subjetiva del esfuerzo durante determinadas actividades físicas. Su respuesta es individual y depende de factores como tolerancia, sensibilidad y consumo habitual, por lo que debe utilizarse respetando estrictamente el rótulo.",
     "characteristics": {
-      "presentation": "Comprimidos",
+      "presentation": "60 comprimidos",
       "flavor": "Sin sabor",
       "servings": "Variable",
       "goal": "Energía y Performance"
     },
-    "howToUse": "Tomá 1–2 comprimidos 30–45 minutos antes del entrenamiento. No consumir después de las 16hs para no afectar la calidad del sueño. No combinar con café, mate, bebidas energizantes u otras fuentes de cafeína el mismo día.",
+    "howToUse": "Consumí únicamente la porción indicada en el envase 30-45 minutos antes del entrenamiento o actividad y evitá combinarla con otras fuentes de cafeína. No la utilices cerca del horario de descanso. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
     "goalDescription": "Potenciá el rendimiento, el foco mental y la resistencia durante sesiones de alta intensidad. Como pre-workout natural, retrasa la fatiga, mejora la concentración y aumenta la disponibilidad de energía sin calorías adicionales.",
     "nutritionTable": "cafeina-ena-tabla.webp",
     "links": {
@@ -234,15 +251,21 @@
     "stock": true,
     "active": true,
     "badge": "Disponible",
-    "description": "Barrita Integra sabor arándano. Alta en proteínas y baja en azúcar. Snack ideal entre comidas para mantener el aporte proteico sin romper la dieta.",
+    "relatedSlugs": [
+      "barrita-integra-mani",
+      "barrita-crudda-brownie",
+      "combo-mixto-5cajas-crudda-integra",
+      "barrita-pont"
+    ],
+    "description": "Barrita proteica con 15 g de proteína por unidad, pensada para complementar la ingesta diaria de aminoácidos de forma práctica. Su matriz combina proteína, carbohidratos y grasas, mientras que la pasta de maní aporta una textura cremosa y los arándanos un contraste frutal, dulce y ligeramente ácido.",
     "characteristics": {
-      "presentation": "Cajita individual",
-      "flavor": "Arándano",
-      "servings": "1 barra",
-      "goal": "Aporte de Proteína y Saciedad"
+      "presentation": "Caja de 10U",
+      "flavor": "Chocolate & Arándanos",
+      "servings": "10",
+      "goal": "Aporte proteico y Saciedad"
     },
-    "howToUse": "Consumí directamente del envase en cualquier momento del día. Ideal como snack entre comidas, antes o después del entrenamiento, o cuando no podés acceder a una comida completa. No requiere preparación ni refrigeración.",
-    "goalDescription": "Sumá proteínas de calidad en cualquier momento sin preparación. Controlá el hambre entre comidas, mantenés tu ingesta proteica diaria y evitás recurrir a snacks ultraprocesados sin sacrificar el sabor.",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce con cobertura de chocolate. No requiere preparación ni refrigeración.",
+    "goalDescription": "Sumá proteína y fibra con un snack dulce que te ayuda a mantener el foco entre comidas.",
     "nutritionTable": "barrita-integra-arandano-tabla.jpg",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Integra%20Ar%C3%A1ndano"
@@ -261,19 +284,23 @@
     "imageSurface": "light",
     "stock": true,
     "active": true,
-    "badge": "Disponible",
+    "badge": "Más Vendido",
+    "featured": true,
     "relatedSlugs": [
-      "barrita-pont"
+      "barrita-pont",
+      "combo-mixto-3cajas-crudda-integra",
+      "combo-proteina-creatina-gentech",
+      "barrita-crudda-mani"
     ],
-    "description": "Barrita Integra sabor maní. Alta en proteínas y baja en azúcar. Snack ideal entre comidas para mantener el aporte proteico sin romper la dieta.",
+    "description": "Barrita proteica con 15 g de proteína por unidad, ideal para sumar proteína entre comidas o después del entrenamiento. Su combinación de proteína, carbohidratos y grasas ofrece una colación práctica y energética, mientras que el maní y el chocolate aportan un sabor intenso, tostado y equilibrado.",
     "characteristics": {
-      "presentation": "Cajita individual",
-      "flavor": "Maní",
-      "servings": "10 barras",
-      "goal": "Aporte de Proteína y Saciedad"
+      "presentation": "Caja de 10U",
+      "flavor": "Chocolate & Maní",
+      "servings": "10",
+      "goal": "Aporte proteico y Saciedad"
     },
-    "howToUse": "Consumí directamente del envase en cualquier momento del día. Ideal como snack entre comidas, antes o después del entrenamiento, o cuando no podés acceder a una comida completa. No requiere preparación ni refrigeración.",
-    "goalDescription": "Sumá proteínas de calidad en cualquier momento sin preparación. Controlá el hambre entre comidas, mantenés tu ingesta proteica diaria y evitás recurrir a snacks ultraprocesados sin sacrificar el sabor.",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce con cobertura de chocolate. No requiere preparación ni refrigeración.",
+    "goalDescription": "Sumá proteína y fibra con un snack dulce que te ayuda a mantener el foco entre comidas.",
     "nutritionTable": "barrita-integra-mani-tabla.jpg",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Integra%20Man%C3%AD"
@@ -292,15 +319,21 @@
     "stock": true,
     "active": true,
     "badge": "Disponible",
-    "description": "Barrita Crudda sabor banana. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
+    "relatedSlugs": [
+      "combo-crudda-pont",
+      "barrita-integra-arandano",
+      "barrita-crudda-arandanos",
+      "barrita-crudda-avellana"
+    ],
+    "description": "Barrita proteica con 9 g de proteína por unidad, diseñada para complementar la ingesta diaria de aminoácidos en un formato práctico. Su combinación de proteína, fibra, carbohidratos y grasas aporta una matriz nutricional equilibrada, mientras que el sabor banana toffee ofrece un perfil dulce, suave y diferente.",
     "characteristics": {
       "presentation": "Caja de 10U",
-      "flavor": "Banana",
-      "servings": "Variable",
-      "goal": "Aporte de Proteína y Saciedad"
+      "flavor": "Banana Toffe",
+      "servings": "10",
+      "goal": "Aporte proteico y Saciedad"
     },
-    "howToUse": "Consumí directamente del envase en cualquier momento. Ideal como snack entre comidas, antes o después del entrenamiento o como merienda saludable. No requiere preparación ni refrigeración.",
-    "goalDescription": "Nutrición de etiqueta limpia: sin conservantes artificiales, sin colorantes, sin endulzantes de síntesis. Sumá proteína y energía real con ingredientes naturales para atletas que priorizan lo que entra en su cuerpo.",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce. No requiere preparación ni refrigeración.",
+    "goalDescription": "Sumá proteína y fibra con un snack dulce que te ayuda a mantener el foco entre comidas.",
     "nutritionTable": "barrita-crudda-banana-tabla.webp",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Banana"
@@ -319,15 +352,21 @@
     "stock": false,
     "active": true,
     "badge": "Agotado",
-    "description": "Barrita Crudda sabor coco. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
+    "relatedSlugs": [
+      "barrita-integra-mani",
+      "barrita-crudda-brownie",
+      "combo-mixto-5cajas-crudda-integra",
+      "barrita-pont"
+    ],
+    "description": "Barrita proteica con 9 g de proteína por unidad, diseñada para complementar la ingesta diaria de aminoácidos en un formato práctico. Su combinación de proteína, fibra, carbohidratos y grasas aporta una matriz nutricional equilibrada, mientras que el sabor banana toffee ofrece un perfil dulce, suave y diferente.",
     "characteristics": {
       "presentation": "Caja de 10U",
-      "flavor": "Coco",
-      "servings": "Variable",
-      "goal": "Aporte de Proteína y Saciedad"
+      "flavor": "Coco y Chocolate",
+      "servings": "10",
+      "goal": "Aporte proteico y Saciedad"
     },
-    "howToUse": "Consumí directamente del envase en cualquier momento. Ideal como snack entre comidas, antes o después del entrenamiento o como merienda saludable. No requiere preparación ni refrigeración.",
-    "goalDescription": "Nutrición de etiqueta limpia: sin conservantes artificiales, sin colorantes, sin endulzantes de síntesis. Sumá proteína y energía real con ingredientes naturales para atletas que priorizan lo que entra en su cuerpo.",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce. No requiere preparación ni refrigeración.",
+    "goalDescription": "Sumá proteína y fibra con un snack dulce que te ayuda a mantener el foco entre comidas.",
     "nutritionTable": "barrita-crudda-coco-tabla.webp",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Coco"
@@ -346,16 +385,23 @@
     "imageSurface": "light",
     "stock": true,
     "active": true,
-    "badge": "Disponible",
-    "description": "Barrita Crudda sabor avellana. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
+    "badge": "Más Vendido",
+    "featured": true,
+    "relatedSlugs": [
+      "combo-crudda-pont",
+      "barrita-integra-arandano",
+      "barrita-crudda-banana",
+      "combo-mixto-5cajas-crudda-integra"
+    ],
+    "description": "Barrita proteica con 9 g de proteína por unidad, formulada para sumar aminoácidos de forma rápida y sin preparación. Su contenido de proteína y fibra la convierte en una colación práctica, mientras que la avellana y el chocolate aportan un perfil profundo, tostado y cremoso.",
     "characteristics": {
       "presentation": "Caja de 10U",
-      "flavor": "Avellana",
-      "servings": "Variable",
-      "goal": "Aporte de Proteína y Saciedad"
+      "flavor": "Avellana y Chocolate",
+      "servings": "10",
+      "goal": "Aporte proteico y Saciedad"
     },
-    "howToUse": "Consumí directamente del envase en cualquier momento. Ideal como snack entre comidas, antes o después del entrenamiento o como merienda saludable. No requiere preparación ni refrigeración.",
-    "goalDescription": "Nutrición de etiqueta limpia: sin conservantes artificiales, sin colorantes, sin endulzantes de síntesis. Sumá proteína y energía real con ingredientes naturales para atletas que priorizan lo que entra en su cuerpo.",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce. No requiere preparación ni refrigeración.",
+    "goalDescription": "Sumá proteína y fibra con un snack dulce que te ayuda a mantener el foco entre comidas.",
     "nutritionTable": "barrita-crudda-avellana-tabla.jpg",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Avellana"
@@ -374,16 +420,23 @@
     "stock": true,
     "active": true,
     "badge": "Disponible",
-    "description": "Barrita Crudda sabor brownie. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
+    "featured": true,
+    "relatedSlugs": [
+      "barrita-pont",
+      "combo-mixto-3cajas-crudda-integra",
+      "combo-proteina-creatina-gentech",
+      "barrita-integra-mani"
+    ],
+    "description": "Barrita proteica con 9 g de proteína por unidad, formulada para sumar aminoácidos de forma rápida y sin preparación. Su contenido de proteína y fibra la convierte en una colación práctica, mientras que la avellana y el chocolate aportan un perfil profundo, tostado y cremoso.",
     "characteristics": {
       "presentation": "Caja de 10U",
       "flavor": "Brownie",
-      "servings": "Variable",
-      "goal": "Aporte de Proteína y Saciedad"
+      "servings": "10",
+      "goal": "Aporte proteico y Saciedad"
     },
-    "howToUse": "Consumí directamente del envase en cualquier momento. Ideal como snack entre comidas, antes o después del entrenamiento o como merienda saludable. No requiere preparación ni refrigeración.",
-    "goalDescription": "Nutrición de etiqueta limpia: sin conservantes artificiales, sin colorantes, sin endulzantes de síntesis. Sumá proteína y energía real con ingredientes naturales para atletas que priorizan lo que entra en su cuerpo.",
-    "nutritionTable": "barrita-crudda-brownie-tabla.webp",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce. No requiere preparación ni refrigeración.",
+    "goalDescription": "Sumá proteína y fibra con un snack dulce que te ayuda a mantener el foco entre comidas.",
+    "nutritionTable": "Barrita-crudda-brownie-tabla.png",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Brownie"
     }
@@ -401,16 +454,22 @@
     "stock": true,
     "active": true,
     "badge": "Disponible",
-    "description": "Barrita Crudda sabor maní. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
+    "relatedSlugs": [
+      "proteina-vegetal-gold-nutrition",
+      "combo-proteina-creatina-gentech",
+      "combo-mixto-5cajas-crudda-integra",
+      "barrita-pont"
+    ],
+    "description": "Barrita proteica con 9 g de proteína por unidad, ideal para quienes buscan una colación práctica con buen aporte proteico. La combinación de proteína y fibra contribuye a una matriz nutricional más completa, mientras que el maní y el caramelo aportan un sabor intenso, dulce y ligeramente tostado.",
     "characteristics": {
       "presentation": "Caja de 10U",
-      "flavor": "Maní",
-      "servings": "Variable",
-      "goal": "Aporte de Proteína y Saciedad"
+      "flavor": "Peanut Caramel",
+      "servings": "10",
+      "goal": "Aporte proteico y Saciedad"
     },
-    "howToUse": "Consumí directamente del envase en cualquier momento. Ideal como snack entre comidas, antes o después del entrenamiento o como merienda saludable. No requiere preparación ni refrigeración.",
-    "goalDescription": "Nutrición de etiqueta limpia: sin conservantes artificiales, sin colorantes, sin endulzantes de síntesis. Sumá proteína y energía real con ingredientes naturales para atletas que priorizan lo que entra en su cuerpo.",
-    "nutritionTable": "barrita-crudda-mani-tabla.jpg",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce. No requiere preparación ni refrigeración.",
+    "goalDescription": "Sumá proteína y fibra con un snack dulce que te ayuda a mantener el foco entre comidas.",
+    "nutritionTable": "Barrita-crudda-mani-tabla.png",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Man%C3%AD"
     }
@@ -424,20 +483,26 @@
     "subcategory": "crudda",
     "price": "$20.000",
     "priceNumeric": 20000,
-    "image": "barrita-crudda-arandanos.webp",
+    "image": "barrita-crudda-arandanos.png",
     "stock": true,
     "active": true,
     "badge": "Disponible",
-    "description": "Barrita Crudda sabor arándanos. Ingredientes naturales, sin conservantes artificiales. Nutrición de etiqueta limpia para atletas conscientes.",
+    "relatedSlugs": [
+      "combo-crudda-pont",
+      "barrita-pont",
+      "whey-gentech-500g-chocolate",
+      "barrita-crudda-brownie"
+    ],
+    "description": "Barrita proteica con 9 g de proteína por unidad, diseñada para sumar proteína y fibra en un formato cómodo y portátil. Su perfil combina notas frutales y ligeramente ácidas del arándano con el sabor tostado de la nuez, logrando una opción diferente y equilibrada.",
     "characteristics": {
       "presentation": "Caja de 10U",
-      "flavor": "Arándanos",
-      "servings": "Variable",
-      "goal": "Aporte de Proteína y Saciedad"
+      "flavor": "Arándanos y Nuez",
+      "servings": "10",
+      "goal": "Aporte proteico y Saciedad"
     },
-    "howToUse": "Consumí directamente del envase en cualquier momento. Ideal como snack entre comidas, antes o después del entrenamiento o como merienda saludable. No requiere preparación ni refrigeración.",
-    "goalDescription": "Nutrición de etiqueta limpia: sin conservantes artificiales, sin colorantes, sin endulzantes de síntesis. Sumá proteína y energía real con ingredientes naturales para atletas que priorizan lo que entra en su cuerpo.",
-    "nutritionTable": "barrita-crudda-arandanos-tabla.webp",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce. No requiere preparación ni refrigeración.",
+    "goalDescription": "Sumá proteína y fibra con un snack dulce que te ayuda a mantener el foco entre comidas.",
+    "nutritionTable": "Barrita-crudda-arandanos-tabla.png",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Crudda%20Ar%C3%A1ndano"
     }
@@ -451,26 +516,25 @@
     "subcategory": "pont",
     "price": "$26.500",
     "priceNumeric": 26500,
-    "image": "barrita-pont.webp",
+    "image": "Barrita-pont.png",
     "stock": true,
     "active": true,
-    "heroCarousel": true,
-    "heroCarouselOrder": 3,
     "badge": "Disponible",
-    "featured": true,
     "relatedSlugs": [
       "combo-crudda-pont",
-      "combo-integra-pont"
+      "combo-integra-pont",
+      "barrita-integra-arandano",
+      "barrita-integra-mani"
     ],
-    "description": "Caja de barras Pont. Alta en proteínas con cobertura de chocolate. Baja en azúcar y alta en fibra. Sabor indulgente sin comprometer tus objetivos.",
+    "description": "Barrita formulada con un elevado aporte proteico, 18 g por unidad en su presentación comercial. La proteína permite complementar la ingesta diaria de aminoácidos, mientras que la fibra y el resto de los macronutrientes determinan su textura, densidad energética y respuesta digestiva. Su cobertura de chocolate combina funcionalidad nutricional con una experiencia similar a una golosina premium.",
     "characteristics": {
       "presentation": "Caja de 12U",
       "flavor": "Chocolate",
       "servings": "12",
       "goal": "Proteína y Sabor Premium"
     },
-    "howToUse": "Consumí directamente del envase. Perfecta como snack post-entrenamiento, entre comidas o cuando buscás algo dulce con cobertura de chocolate. No requiere preparación ni refrigeración.",
-    "goalDescription": "Satisfacé el antojo de chocolate sin comprometer tus objetivos. Alta en proteínas, baja en azúcar y con fibra para una saciedad más duradera. Proteína premium con el placer de una barra con cobertura real.",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce con cobertura de chocolate. No requiere preparación ni refrigeración.",
+    "goalDescription": "Alta en proteínas, baja en azúcar y con fibra para una saciedad más duradera. Proteína premium con el placer de una barra con cobertura real.",
     "nutritionTable": "barrita-pont-tabla.webp",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20la%20Barrita%20Pont"
@@ -489,15 +553,21 @@
     "stock": true,
     "active": true,
     "badge": "Combo",
-    "description": "Mix de 2X Cajas de barritas proteicas de diferentes marcas y sabores. Probá Crudda y Pont en un solo combo. Ideal para variedad y descubrir tu favorita.",
+    "relatedSlugs": [
+      "combo-mixto-3cajas-crudda-integra",
+      "combo-proteina-creatina-gentech",
+      "creatina-granger-300g",
+      "whey-gentech-500g-chocolate"
+    ],
+    "description": "Combina dos perfiles nutricionales diferentes dentro de una misma compra. Crudda aporta barritas con una relación destacada entre proteína y fibra, mientras que Pont ofrece una mayor concentración proteica por unidad. Esta variedad permite alternar densidad energética, textura y sabor según el momento del día, manteniendo siempre una fuente práctica de proteína disponible.",
     "characteristics": {
-      "presentation": "2X Cajas X10 unidades",
+      "presentation": "2X Cajas 10 Unidades",
       "flavor": "A elección",
       "servings": "22",
-      "goal": "Proteína y Ahorro"
+      "goal": "Semana Cubierta"
     },
-    "howToUse": "Consumí una o dos barritas al día como snack entre comidas o post-entrenamiento. Alternás entre sabores de Crudda y Pont para variar. No requieren preparación ni refrigeración.",
-    "goalDescription": "Variedad proteica premium con mejor precio. Dos marcas en un combo para no aburrir el paladar durante la semana y mantener tu plan de alimentación sin excusas.",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce. No requiere preparación ni refrigeración.",
+    "goalDescription": "Disfrutá más variedad, más proteína y dos estilos de barritas en una sola compra.",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Crudda%20Caja%20x12"
     }
@@ -515,15 +585,21 @@
     "stock": true,
     "active": true,
     "badge": "Combo",
-    "description": "Mix de 2X Cajas de barritas proteicas de diferentes marcas y sabores. Probá Integra y Pont en un solo combo. Ideal para variedad y descubrir tu favorita.",
+    "relatedSlugs": [
+      "combo-proteina-creatina-gentech",
+      "creatina-granger-300g",
+      "whey-gentech-500g-chocolate",
+      "combo-mixto-5cajas-crudda-integra"
+    ],
+    "description": "Reúne dos alternativas proteicas con composiciones y experiencias sensoriales diferentes. Integra combina proteína con ingredientes como maní, chocolate o frutas, mientras que Pont concentra un elevado aporte proteico en una barrita con cobertura de chocolate. El resultado es un combo pensado para variar sabores y formatos sin perder el objetivo principal de complementar la ingesta de proteínas.",
     "characteristics": {
-      "presentation": "2X Cajas X10 unidades",
+      "presentation": "2X Cajas 10 Unidades",
       "flavor": "A elección",
       "servings": "22",
-      "goal": "Proteína y Ahorro"
+      "goal": "Semana Cubierta"
     },
-    "howToUse": "Consumí una o dos barritas al día como snack entre comidas o post-entrenamiento. Alternás entre sabores de Integra y Pont para variar. No requieren preparación ni refrigeración.",
-    "goalDescription": "Variedad proteica premium con mejor precio. Dos marcas distintas en un combo para no repetir el mismo sabor toda la semana y sostener tu plan de alimentación fácilmente.",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce. No requiere preparación ni refrigeración.",
+    "goalDescription": "Disfrutá más variedad, más proteína y dos estilos de barritas en una sola compra.",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Integra%20Caja%20x12"
     }
@@ -541,14 +617,20 @@
     "stock": true,
     "active": true,
     "badge": "Combo",
-    "description": "Mix de 3X Cajas de barritas proteicas de diferentes marcas y sabores. Probá Integra y Crudda en un solo combo. Ideal para variedad y descubrir tu favorita.",
+    "relatedSlugs": [
+      "combo-integra-pont",
+      "combo-mixto-5cajas-crudda-integra",
+      "barrita-crudda-brownie",
+      "barrita-crudda-avellana"
+    ],
+    "description": "Una selección diseñada para mantener variedad nutricional y sensorial durante varias semanas. Las barritas combinan proteínas, carbohidratos, grasas y fibra en proporciones diferentes según cada sabor, permitiendo elegir opciones más densas o más livianas de acuerdo con la rutina diaria. Tres cajas ofrecen una forma práctica de planificar colaciones sin depender siempre del mismo producto.",
     "characteristics": {
-      "presentation": "3X Cajas X10 unidades",
-      "flavor": "Variedad",
+      "presentation": "3X Cajas 10 Unidades",
+      "flavor": "A elección",
       "servings": "30",
-      "goal": "Proteína y Ahorro"
+      "goal": "Semanas Cubiertas"
     },
-    "howToUse": "Consumí una o dos barritas al día como snack entre comidas o post-entrenamiento. Variá entre las tres cajas para no aburrir el paladar. No requieren preparación ni refrigeración.",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce. No requiere preparación ni refrigeración.",
     "goalDescription": "Variedad máxima para toda la semana. Tres cajas de barritas proteicas premium con mejor precio por unidad. Abastecete con opciones saludables y organizá tu semana sin quedarte sin stock.",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Pont%20Caja%20x12"
@@ -567,17 +649,23 @@
     "stock": true,
     "active": true,
     "heroCarousel": true,
-    "heroCarouselOrder": 5,
+    "heroCarouselOrder": 2,
     "badge": "Combo",
     "featured": true,
-    "description": "Mix de 5X Cajas de barritas proteicas de diferentes marcas y sabores. Probá Integra y Crudda en un solo combo. Ideal para variedad y descubrir tu favorita.",
+    "relatedSlugs": [
+      "barrita-pont",
+      "combo-crudda-pont",
+      "combo-integra-pont",
+      "combo-proteina-creatina-gentech"
+    ],
+    "description": "Formato de mayor volumen orientado a quienes consumen barritas con frecuencia o desean organizar sus colaciones con anticipación. Al combinar distintas fórmulas y sabores, permite alternar perfiles de macronutrientes, cantidades de fibra y fuentes proteicas. Además de ofrecer mayor variedad, reduce la necesidad de realizar compras pequeñas de manera constante.",
     "characteristics": {
-      "presentation": "5X Cajas X10 unidades",
-      "flavor": "Variedad",
+      "presentation": "5X Cajas 10 Unidades",
+      "flavor": "A elección",
       "servings": "50",
-      "goal": "Proteína y Variedad"
+      "goal": "Mes más que Cubierto"
     },
-    "howToUse": "Consumí una o dos barritas al día como snack entre comidas o post-entrenamiento. Variá entre las cinco cajas para no repetir sabores. No requieren preparación ni refrigeración.",
+    "howToUse": "Consumí como snack perfecto post-entrenamiento, entre comidas o cuando buscás algo dulce. No requiere preparación ni refrigeración.",
     "goalDescription": "El mejor precio por unidad para abastecerte durante semanas. Cinco cajas de barritas proteicas para quienes toman en serio su nutrición y no quieren quedarse sin opciones nutritivas en ningún momento.",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Mixto%20Barritas%20x12"
@@ -590,25 +678,29 @@
     "brand": "Gentech",
     "category": "combos",
     "subcategory": "combos",
-    "price": "Consultar",
+    "price": "$54.000",
+    "priceNumeric": 54000,
     "image": "combo-proteina-creatina-gentech.png",
     "stock": true,
     "active": true,
+    "heroCarousel": true,
+    "heroCarouselOrder": 1,
     "badge": "Combo",
     "featured": true,
-    "skipProductSnippet": true,
     "relatedSlugs": [
-      "whey-gentech-500g-chocolate",
-      "creatina-gentech-250g"
+      "combo-integra-pont",
+      "combo-mixto-5cajas-crudda-integra",
+      "barrita-crudda-banana",
+      "creatina-granger-300g"
     ],
-    "description": "Combo Gentech: Proteína en polvo + Creatina Monohidrato 250g. La dupla perfecta para maximizar el rendimiento, la recuperación y el crecimiento muscular.",
+    "description": "Combina dos suplementos con mecanismos completamente diferentes y complementarios. La proteína aporta aminoácidos esenciales utilizados en la síntesis y reparación de proteínas musculares, mientras que la creatina monohidratada aumenta la disponibilidad de fosfocreatina para regenerar ATP durante esfuerzos intensos. Juntas conforman una estrategia integral para acompañar rendimiento, recuperación y adaptación al entrenamiento.",
     "characteristics": {
       "presentation": "Proteína 500g + Creatina 250g",
       "flavor": "A elección",
       "servings": "Variable",
       "goal": "Fuerza, Volumen y Recuperación"
     },
-    "howToUse": "Post-entrenamiento: disolvé la proteína y la creatina juntas en 250–300 ml de agua o leche. También podés consumirlas por separado. La creatina puede tomarse en cualquier momento del día.",
+    "howToUse": "Post-entrenamiento: disolvé la proteína y la creatina juntas en 250–300 ml de agua o leche. También podés consumirlas por separado. La creatina puede tomarse en cualquier momento del día. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
     "goalDescription": "La dupla más efectiva del fitness: proteína para recuperar y construir músculo, creatina para aumentar la fuerza y la potencia. Juntas maximizan los resultados de cada sesión y aceleran la adaptación al ejercicio.",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Prote%C3%ADna%20%2B%20Creatina%20Gentech"
@@ -627,14 +719,20 @@
     "stock": true,
     "active": true,
     "badge": "Combo",
-    "description": "Combo Gentech: Proteína en polvo + Shaker. Todo lo que necesitás para empezar: tu proteína y el vaso mezclador para prepararla en cualquier momento y lugar.",
+    "relatedSlugs": [
+      "barrita-crudda-avellana",
+      "barrita-crudda-arandanos",
+      "whey-gentech-500g-chocolate",
+      "combo-mixto-5cajas-crudda-integra"
+    ],
+    "description": "Integra una fuente concentrada de proteína con el accesorio necesario para prepararla de manera rápida y homogénea. La agitación mecánica del shaker mejora la dispersión del polvo en el líquido, reduce la formación de grumos y facilita una dosificación consistente. Es una solución práctica para incorporar proteína en distintos momentos del día sin depender de licuadoras u otros utensilios.",
     "characteristics": {
       "presentation": "Proteína 500g + Shaker",
       "flavor": "A elección",
       "servings": "16",
       "goal": "Volumen y Recuperación"
     },
-    "howToUse": "Agregá 1 porción de proteína (aprox. 30 g) en el shaker con 200–300 ml de agua o leche. Cerrá bien y agitá 10–15 segundos hasta obtener una mezcla homogénea. Tomá preferentemente post-entrenamiento.",
+    "howToUse": "Agregá 1 porción de proteína (aprox. 30 g) en el shaker con 200–300 ml de agua o leche. Cerrá bien y agitá 10–15 segundos hasta obtener una mezcla homogénea. Tomá preferentemente post-entrenamiento. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
     "goalDescription": "Todo lo que necesitás para empezar: la proteína para recuperar y ganar músculo, y el shaker para prepararla en cualquier lugar. El combo perfecto para iniciar tu rutina de suplementación sin complicaciones.",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Prote%C3%ADna%20%2B%20Shaker%20Gentech"
@@ -653,14 +751,20 @@
     "stock": true,
     "active": true,
     "badge": "Combo",
-    "description": "Combo Gold Nutrition: Proteína Vegana en polvo + Shaker. La combinación ideal para incorporar tu suplemento con el equipo completo desde el primer día.",
+    "relatedSlugs": [
+      "combo-integra-pont",
+      "combo-mixto-5cajas-crudda-integra",
+      "whey-gentech-500g-chocolate",
+      "barrita-integra-mani"
+    ],
+    "description": "Combina una matriz proteica de origen vegetal con un sistema práctico de preparación. La proteína vegetal aporta aminoácidos relevantes para el mantenimiento y la reparación muscular, mientras que el shaker facilita su dispersión y consumo fuera de casa. Es una propuesta completa para quienes siguen una alimentación vegana o prefieren alternativas sin proteínas derivadas de la leche.",
     "characteristics": {
       "presentation": "Proteína 907g + Shaker",
       "flavor": "Neutro",
       "servings": "30",
       "goal": "Volumen y Recuperación"
     },
-    "howToUse": "Agregá 1 porción de proteína vegana en el shaker con 200–300 ml de agua o leche vegetal. Cerrá bien y agitá 10–15 segundos. Tomá post-entrenamiento o cuando necesitás sumar proteína a tu dieta.",
+    "howToUse": "Agregá 1 porción de proteína vegana en el shaker con 200–300 ml de agua o leche vegetal. Cerrá bien y agitá 10–15 segundos. Tomá post-entrenamiento o cuando necesitás sumar proteína a tu dieta. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
     "goalDescription": "La combinación perfecta para suplementarte con proteína vegana de forma práctica. Sin lactosa, sin proteínas animales. Todo lo necesario para preparar tu suplemento en cualquier momento y lugar.",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Combo%20Prote%C3%ADna%20%2B%20Shaker%20Gold%20Nutrition"
@@ -682,9 +786,11 @@
     "badge": "Disponible",
     "relatedSlugs": [
       "whey-gentech-500g-chocolate",
-      "combo-shaker-proteina-gentech"
+      "combo-shaker-proteina-gentech",
+      "combo-shaker-proteina-gold-nutrition",
+      "combo-crudda-pont"
     ],
-    "description": "Shaker ENA Plus. Vaso mezclador con amplia capacidad, diseño ergonómico y tapa hermética a prueba de filtraciones. Ideal para preparar proteínas y suplementos en polvo.",
+    "description": "Accesorio diseñado para mejorar la dispersión de suplementos en polvo mediante agitación mecánica. El movimiento del líquido genera turbulencia, separa partículas aglomeradas y favorece una mezcla más uniforme de proteínas, creatinas y otras formulaciones solubles. Su tapa hermética y formato portátil permiten preparar y transportar bebidas con mayor comodidad, reduciendo derrames y grumos.",
     "characteristics": {
       "presentation": "Unidad",
       "flavor": "-",
@@ -692,7 +798,7 @@
       "goal": "Accesorio Deportivo"
     },
     "howToUse": "Agregá tu suplemento en polvo, luego incorporá el líquido (agua, leche, jugo). Cerrá la tapa y agitá 10–15 segundos hasta obtener una mezcla homogénea. Lavalo con agua y jabón después de cada uso.",
-    "goalDescription": "Preparaciones rápidas y prácticas de proteínas, creatinas y cualquier suplemento en polvo. Su diseño ergonómico y tapa hermética evitan derrames al transportarlo al gimnasio o al trabajo.",
+    "goalDescription": "Preparaciones rápidas y prácticas de proteínas, creatinas y cualquier suplemento en polvo. Su diseño ergonómico y tapa a prueba de derrames al transportarlo al gimnasio o al trabajo.",
     "nutritionTable": "shaker-ena-plus-tabla.jpg",
     "links": {
       "whatsapp": "https://wa.me/5491124602875?text=Hola%2C%20me%20interesa%20el%20Shaker%20ENA%20Plus"
@@ -711,14 +817,21 @@
     "stock": false,
     "active": true,
     "badge": "Agotado",
-    "description": "Citrato de Magnesio Granger, ideal para complementar la ingesta diaria de magnesio y apoyar la función muscular, nerviosa y energética.",
+    "relatedSlugs": [
+      "vitamina-c-natier",
+      "cafeina-ena",
+      "creatina-granger-300g",
+      "combo-integra-pont",
+      "whey-gentech-500g-chocolate"
+    ],
+    "description": "Aporta magnesio en forma de citrato, una sal que se disocia para liberar magnesio disponible para funciones metabólicas. Este mineral participa como cofactor en cientos de reacciones enzimáticas, incluidas aquellas relacionadas con el metabolismo del ATP, la contracción y relajación muscular, la transmisión nerviosa y el equilibrio electrolítico. Es una opción destinada a complementar la ingesta diaria de magnesio, especialmente cuando la alimentación no cubre adecuadamente los requerimientos.",
     "characteristics": {
       "presentation": "144g en polvo",
       "flavor": "Sin sabor",
       "servings": "90",
-      "goal": "Descanso y Recuperación"
+      "goal": "Recuperación y Descanso"
     },
-    "howToUse": "Tomá la porción indicada en el envase, preferentemente junto con una comida y agua. No superes la dosis recomendada.",
+    "howToUse": "Disolvé la porción indicada en agua y consumila siguiendo las instrucciones del envase. Antes de consumir este suplemento, consultá con tu médico de cabecera.",
     "goalDescription": "Potenciá tu bienestar diario y acompañá cada entrenamiento con un mineral esencial para la función muscular, el sistema nervioso y la producción de energía.",
     "nutritionTable": "citrato-magnesio-tabla.webp",
     "links": {
